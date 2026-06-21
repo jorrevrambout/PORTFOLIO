@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jorre Vrambout — Product Development & Design</title>
-<meta name="description" content="Portfolio of Jorre Vrambout — Master's student in Product Development at the University of Antwerp. Designing at the intersection of design, sustainability, technology and human experience." />
+<title>Jorre Vrambout, Product Development & Design</title>
+<meta name="description" content="Portfolio of Jorre Vrambout. Product Development student at the University of Antwerp, designing for repair, longevity and circular systems." />
 <meta name="author" content="Jorre Vrambout" />
-<meta property="og:title" content="Jorre Vrambout — Product Development & Design" />
+<meta property="og:title" content="Jorre Vrambout, Product Development & Design" />
 <meta property="og:description" content="Five selected projects in service design, UX, sustainability and scenography." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%230c0c0c'%3E%3Crect x='44' y='5' width='12' height='90' rx='3'/%3E%3Crect x='44' y='5' width='12' height='90' rx='3' transform='rotate(60 50 50)'/%3E%3Crect x='44' y='5' width='12' height='90' rx='3' transform='rotate(120 50 50)'/%3E%3C/g%3E%3C/svg%3E" />
@@ -19,41 +19,31 @@
 
 <!-- ===== SVG sprite ===== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="ast" viewBox="0 0 100 100">
-    <g fill="currentColor">
-      <rect x="43" y="4" width="14" height="92" rx="3"/>
-      <rect x="43" y="4" width="14" height="92" rx="3" transform="rotate(60 50 50)"/>
-      <rect x="43" y="4" width="14" height="92" rx="3" transform="rotate(120 50 50)"/>
-    </g>
-  </symbol>
+  <symbol id="ast" viewBox="0 0 100 100"><g fill="currentColor"><rect x="43" y="4" width="14" height="92" rx="3"/><rect x="43" y="4" width="14" height="92" rx="3" transform="rotate(60 50 50)"/><rect x="43" y="4" width="14" height="92" rx="3" transform="rotate(120 50 50)"/></g></symbol>
   <symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 3v17m0 0l-7-7m7 7l7-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="arrow-diag" viewBox="0 0 24 24"><path d="M6 18L18 6M18 6H9M18 6v9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m0 0l-7-7m7 7l-7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 </svg>
 
 <!-- ===== Loader ===== -->
 <div class="loader" id="loader" aria-hidden="true">
-  <div class="loader__row">
-    <span class="loader__name">JORRE VRAMBOUT</span>
-    <span class="loader__pct"><i id="loaderPct">0</i>—100</span>
-  </div>
+  <div class="loader__row"><span class="loader__name">JORRE VRAMBOUT</span><span class="loader__pct"><i id="loaderPct">0</i> / 100</span></div>
   <div class="loader__bar"><span id="loaderBar"></span></div>
 </div>
 
-<!-- ===== Custom cursor (desktop) ===== -->
 <div class="cursor" id="cursor" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ast"/></svg></div>
-
-<!-- ===== Scroll progress ===== -->
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <!-- ===== Navigation ===== -->
 <header class="nav" id="nav">
-  <a href="#top" class="nav__brand" aria-label="Jorre Vrambout — home">
-    <svg class="nav__ast" viewBox="0 0 100 100" aria-hidden="true"><use href="#ast"/></svg>
-    <span>Jorre Vrambout</span>
+  <a href="#top" class="nav__brand" aria-label="Jorre Vrambout, home">
+    <svg class="nav__ast" viewBox="0 0 100 100" aria-hidden="true"><use href="#ast"/></svg><span>Jorre Vrambout</span>
   </a>
   <nav class="nav__links" aria-label="Primary">
-    <a href="#work"><span>Work</span></a>
     <a href="#about"><span>About</span></a>
+    <a href="#letter"><span>Letter</span></a>
+    <a href="#work"><span>Work</span></a>
     <a href="#contact"><span>Contact</span></a>
   </nav>
   <button class="nav__theme" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
@@ -62,325 +52,275 @@
   </button>
 </header>
 
-<!-- ===== Project rail (desktop) ===== -->
-<aside class="rail" id="rail" aria-hidden="true">
-  <a href="#p01" data-rail="p01"><i>01</i><span></span></a>
-  <a href="#p02" data-rail="p02"><i>02</i><span></span></a>
-  <a href="#p03" data-rail="p03"><i>03</i><span></span></a>
-  <a href="#p04" data-rail="p04"><i>04</i><span></span></a>
-  <a href="#p05" data-rail="p05"><i>05</i><span></span></a>
-</aside>
-
 <main id="top">
 
 <!-- ===== HERO ===== -->
-<section class="hero" id="home">
+<section class="hero">
   <p class="hero__eyebrow reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg><span>Portfolio 2026</span><i>/</i><span>Product Development</span></p>
   <h1 class="hero__title">
     <span class="hl reveal"><span>Jorre</span></span>
     <span class="hl reveal"><span>Vrambout</span></span>
   </h1>
-  <div class="hero__bottom">
-    <p class="hero__lead reveal">Master's student in Product Development at the University of Antwerp — designing at the intersection of <em>design</em>, <em>sustainability</em>, <em>technology</em> and <em>human experience</em>.</p>
-    <div class="hero__meta reveal">
-      <div><b>Based in</b>Antwerp · Bonheiden, BE</div>
-      <div><b>Focus</b>Service · UX · Circular · Scenography</div>
-      <div><b>Selected</b>Five projects, 2023—2026</div>
-    </div>
-  </div>
-  <a href="#about" class="hero__cue reveal" aria-label="Scroll down">
-    <span>Scroll</span><svg viewBox="0 0 24 24"><use href="#arrow-down"/></svg>
-  </a>
-  <figure class="hero__portrait reveal"><img src="assets/img/jorre_portrait.jpg" alt="Portrait of Jorre Vrambout" loading="eager" /></figure>
+  <p class="hero__role reveal">Product Development student designing for <span class="cyc" style="animation-delay:-1s">repair</span>, <span class="cyc" style="animation-delay:-5s">longevity</span> and <span class="cyc" style="animation-delay:-9s">circular systems</span>.</p>
+  <a href="#about" class="hero__cue reveal" aria-label="Scroll down"><span>Scroll</span><svg viewBox="0 0 24 24"><use href="#arrow-down"/></svg></a>
 </section>
 
-<!-- ===== Marquee ===== -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span>Service Design</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Strategic Design</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Technology-driven Design</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>UX</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Scenography</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Sustainability</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Circular Design</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Prototyping</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg>
-    <span>Service Design</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Strategic Design</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Technology-driven Design</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>UX</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Scenography</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Sustainability</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Circular Design</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg><span>Prototyping</span><svg viewBox="0 0 100 100"><use href="#ast"/></svg>
-  </div>
-</div>
-
-<!-- ===== ABOUT ===== -->
+<!-- ===== ABOUT ME ===== -->
 <section class="about" id="about">
-  <header class="sec-head">
-    <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> About — (00)</p>
-    <h2 class="about__statement reveal-lines">I design <span>experiences</span> where design, sustainability, technology and human experience meet.</h2>
+  <div class="about__grid">
+    <div class="about__text">
+      <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> About me</p>
+      <h2 class="about__lead reveal-lines">I turn complex challenges into concrete, <span class="cyc">meaningful</span> design.</h2>
+      <p class="reveal">I am a Product Development student with a strong interest in sustainable design, repairability and long lifetime products. I work in an iterative and research driven way, combining analytical thinking with hands on prototyping.</p>
+      <p class="reveal">I like working where technology, user behaviour and circular systems meet, and I am motivated by projects that make a real difference. Curious, collaborative and driven by impact rather than aesthetics alone.</p>
+      <ul class="about__facts reveal">
+        <li><b>Based in</b>Antwerp, Belgium</li>
+        <li><b>Born</b>7 September 2003</li>
+        <li><b>Study</b>Master, Product Development</li>
+      </ul>
+    </div>
+    <div class="about__loop reveal" id="photoLoop" aria-label="Photos of Jorre">
+      <img class="loop__img is-on" alt="Jorre Vrambout" />
+      <img class="loop__img" alt="Jorre Vrambout" />
+      <span class="loop__tag"><i id="loopIndex">01</i> / <i id="loopTotal">17</i></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROFILE: skills, hobbies, timeline ===== -->
+<section class="profile" id="profile">
+  <div class="profile__grid">
+
+    <div class="pcol reveal">
+      <h3 class="pcol__title">Hard skills</h3>
+      <ul class="rated">
+        <li><span>Service design</span><span class="dots" data-level="5"></span></li>
+        <li><span>Strategic design</span><span class="dots" data-level="5"></span></li>
+        <li><span>Technology driven design</span><span class="dots" data-level="4"></span></li>
+        <li><span>Adobe software</span><span class="dots" data-level="4"></span></li>
+        <li><span>SolidWorks</span><span class="dots" data-level="4"></span></li>
+      </ul>
+      <h3 class="pcol__title pcol__title--mt">Languages</h3>
+      <ul class="rated">
+        <li><span>Dutch</span><span class="dots" data-level="5"></span></li>
+        <li><span>English</span><span class="dots" data-level="4"></span></li>
+        <li><span>French</span><span class="dots" data-level="3"></span></li>
+      </ul>
+    </div>
+
+    <div class="pcol reveal">
+      <h3 class="pcol__title">Soft skills</h3>
+      <ul class="bullets">
+        <li>Curious and investigative</li>
+        <li>Proactive team player</li>
+        <li>Goal oriented and committed</li>
+        <li>Creative and solution oriented</li>
+        <li>Organizational skills</li>
+        <li>Adaptable and resilient</li>
+        <li>Critical and creative thinking</li>
+        <li>Open minded</li>
+      </ul>
+      <h3 class="pcol__title pcol__title--mt">Hobbies</h3>
+      <ul class="tags"><li>Running</li><li>Scouting</li><li>Bouldering</li><li>Music concerts</li><li>Organising PO events</li></ul>
+    </div>
+
+    <div class="pcol reveal">
+      <h3 class="pcol__title">Education</h3>
+      <ul class="timeline">
+        <li><span class="timeline__yr">2024 / now</span><b>Master, Product Development</b><i>University of Antwerp</i></li>
+        <li><span class="timeline__yr">2021 / 2024</span><b>Bachelor, Product Development</b><i>University of Antwerp</i></li>
+        <li><span class="timeline__yr">2015 / 2021</span><b>Sports sciences</b><i>Berthoutinstituut Klein Seminarie, Mechelen</i></li>
+      </ul>
+      <h3 class="pcol__title pcol__title--mt">Experience</h3>
+      <ul class="timeline">
+        <li><span class="timeline__yr">2025 / now</span><b>Sustainability Ambassador</b><i>Green Office, University of Antwerp</i></li>
+        <li><span class="timeline__yr">2025</span><b>Product Development Intern</b><i>Pars Pro Toto, Ghent</i></li>
+        <li><span class="timeline__yr">2023 / 2025</span><b>Bartender and server</b><i>Het Brughuis, Muizen</i></li>
+        <li><span class="timeline__yr">ongoing</span><b>Youth leader, volunteer</b><i>Scouting Frassati, Bonheiden</i></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MOTIVATIONAL LETTER ===== -->
+<section class="letter" id="letter">
+  <div class="letter__inner">
+    <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Motivational letter</p>
+    <h2 class="letter__title reveal-lines">Why <span class="cyc">repair</span>.</h2>
+    <div class="letter__body">
+      <p class="reveal">I have always struggled with throwing products away, fascinated from an early age by how objects are built and why they fail. Over time that curiosity grew into the Product Development program and, during my Master, into a clear focus on repairability, longevity and circular design.</p>
+      <p class="reveal">I see myself as an iterative researcher with a social and circular conviction. My thesis started from literature and quickly moved into conversations with people across the Belgian repair landscape. I structured those insights into themes that make the real barriers, drivers and leverage points of repair visible. I believe a product service system only matters when there is genuine demand, support and viability for it.</p>
+      <p class="reveal">My ambition is simple. I want to help make repairing as self evident in the future as recycling is today. That asks for clearer diagnosis, guidance and tools at home, smarter use of additive manufacturing for spare parts, and a rethinking of the whole repair experience.</p>
+      <p class="letter__sign reveal">Jorre Vrambout</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORK ===== -->
+<section class="work" id="work">
+  <header class="work__head">
+    <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Selected work</p>
+    <h2 class="work__title reveal-lines">Five projects. Open one to <span class="cyc">explore</span>.</h2>
   </header>
 
-  <div class="about__grid">
-    <div class="about__story">
-      <p class="reveal">Born in Brussels, raised in Mechelen and shaped over the past five years as a Product Development engineer in Antwerp, I've gradually positioned myself at the intersection of people, technology and the planet.</p>
-      <p class="reveal">Sustainability has been the constant thread — from climate activism in school to designing for circularity today. It's why I started Product Development in the first place: I believe design is one of the most powerful levers we have to make a positive change.</p>
-      <p class="reveal">I see design — and scenography — as more than objects or spaces. It's the design of an <em>experience</em> that begins long before someone arrives and continues long after they leave: branding, atmosphere, sound, light, storytelling, anticipation and memory, all part of the same narrative.</p>
-      <p class="reveal">I work best in multidisciplinary teams built on trust, complementary skills and a shared purpose. I bring energy, ideas and momentum — and I'm never afraid to connect people and start things.</p>
-    </div>
-    <div class="about__media">
-      <figure class="shot reveal"><img src="assets/img/jorre_make.jpg" alt="Jorre building a prototype" loading="lazy" /></figure>
-      <figure class="shot reveal"><img src="assets/img/jorre_brainstorm.jpg" alt="A collaborative brainstorm session" loading="lazy" /></figure>
-      <figure class="shot shot--wide reveal"><img src="assets/img/jorre_workshop.jpg" alt="The product development workshop in Antwerp" loading="lazy" /></figure>
-    </div>
-  </div>
+  <div class="projects">
 
-  <div class="about__cols">
-    <div class="about__col reveal">
-      <h3 class="col__title">Education</h3>
-      <ul class="timeline">
-        <li><span class="timeline__yr">2024 — 2026</span><b>Master, Product Development</b><i>University of Antwerp</i></li>
-        <li><span class="timeline__yr">2021 — 2024</span><b>Bachelor, Product Development</b><i>University of Antwerp</i></li>
-        <li><span class="timeline__yr">2015 — 2021</span><b>Science &amp; Sports</b><i>Berthoutinstituut–Klein Seminarie, Mechelen</i></li>
-      </ul>
-    </div>
-    <div class="about__col reveal">
-      <h3 class="col__title">Experience</h3>
-      <ul class="timeline">
-        <li><span class="timeline__yr">2025</span><b>Product Development Intern</b><i>Pars Pro Toto, Ghent</i></li>
-        <li><span class="timeline__yr">2025</span><b>Timber Construction Assistant</b><i>Joenes, Leuven</i></li>
-        <li><span class="timeline__yr">2023 — now</span><b>Server</b><i>Het Brughuis, Muizen</i></li>
-        <li><span class="timeline__yr">now</span><b>Youth Leader · volunteer</b><i>Scouting Frassati, Bonheiden</i></li>
-      </ul>
-    </div>
-    <div class="about__col reveal">
-      <h3 class="col__title">Toolbox</h3>
-      <ul class="tags tags--block">
-        <li>SolidWorks</li><li>SW Visualize</li><li>InDesign</li><li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Illustrator</li><li>Procreate</li><li>Figma</li>
-      </ul>
-      <h3 class="col__title col__title--mt">Languages</h3>
-      <ul class="lang">
-        <li><b>Dutch</b><span>Native</span></li>
-        <li><b>English</b><span>Fluent</span></li>
-        <li><b>French</b><span>Good</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <!-- 01 BIYOU -->
+    <article class="proj" id="p01" data-accent="#1740e8" data-on="#ffffff" style="--accent:#1740e8;--on-accent:#ffffff">
+      <button class="proj__bar" aria-expanded="false" aria-controls="p01d">
+        <span class="proj__num">01</span>
+        <span class="proj__head"><span class="proj__name">B<span class="bar">|</span>YOU</span><span class="proj__teaser">A family of four ergonomic hand tools for the hobbyist jeweler, built around a strong, dreamy brand.</span></span>
+        <span class="proj__metaline">2023 <i>/</i> Ergonomics &amp; branding</span>
+        <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
+      </button>
+      <div class="proj__detail" id="p01d"><div class="proj__inner">
+        <div class="proj__cols">
+          <p class="proj__lead">After studying jewelers and defining a Gen X audience between 43 and 61, the winning concept paired a tiltable, comfortable grip with a precise tensioning system. The result is CALCITE, the jeweler's saw, joined by OPAAL, KUNZIET and ONYX.</p>
+          <ul class="tags"><li>Ergonomics</li><li>Branding</li><li>Tool family</li><li>User research</li><li>SolidWorks</li></ul>
+        </div>
+        <figure class="shot shot--full"><img data-src="assets/img/biyou_poster.jpg" alt="The B|YOU jeweler tool family poster" /></figure>
+        <figure class="shot shot--full"><img data-src="assets/img/biyou_calcite.jpg" alt="CALCITE jeweler's saw, ergonomic breakdown" /></figure>
+        <div class="masonry masonry--3">
+          <figure class="shot"><img data-src="assets/img/biyou_blue.jpg" alt="The jeweler's saw, blue variant" /></figure>
+          <figure class="shot"><img data-src="assets/img/biyou_family.jpg" alt="The tool family on the workbench" /></figure>
+          <figure class="shot"><img data-src="assets/img/biyou_c1.jpg" alt="Concept sketch one" /></figure>
+          <figure class="shot"><img data-src="assets/img/biyou_c2.jpg" alt="Concept sketch two" /></figure>
+          <figure class="shot"><img data-src="assets/img/biyou_c3.jpg" alt="Concept sketch three" /></figure>
+        </div>
+      </div></div>
+    </article>
 
-<!-- ===== WORK INTRO ===== -->
-<section class="work-intro" id="work">
-  <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Selected Work — 2023—2026</p>
-  <h2 class="work-intro__title reveal-lines">Five projects.<br>From <span>hand tools</span> to <span>repair systems</span> to a <span>dancefloor</span>.</h2>
-  <p class="work-intro__note reveal">Each carries its own colour. Everything else stays black, white &amp; grey.</p>
-</section>
+    <!-- 02 BILOO -->
+    <article class="proj" id="p02" data-accent="#8c3296" data-on="#ffffff" style="--accent:#8c3296;--on-accent:#ffffff">
+      <button class="proj__bar" aria-expanded="false" aria-controls="p02d">
+        <span class="proj__num">02</span>
+        <span class="proj__head"><span class="proj__name">Biloo</span><span class="proj__teaser">A waterless, odorless and chemical free composting toilet for the events sector.</span></span>
+        <span class="proj__metaline">2024 <i>/</i> Bachelor's thesis</span>
+        <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
+      </button>
+      <div class="proj__detail" id="p02d"><div class="proj__inner">
+        <div class="proj__cols">
+          <p class="proj__lead">Made with WeComeAsFriends and fully mechanical with no power needed, Biloo uses a dual toilet layout that speeds up installation and maintenance and turns waste into compost using carbon fibre. It scales from festivals to corporate settings.</p>
+          <ul class="tags"><li>Sustainability</li><li>Composting</li><li>Fully mechanical</li><li>Festivals to corporate</li></ul>
+        </div>
+        <div class="stats">
+          <div class="stat"><b data-count="100">0</b><span>people per toilet per day</span></div>
+          <div class="stat"><b data-count="52">0</b><span>toilets per block</span></div>
+          <div class="stat"><b data-count="0">0</b><span>litres of water used</span></div>
+        </div>
+        <p class="proj__sub2">Concept renders</p>
+        <figure class="shot shot--full"><img data-src="assets/img/biloo_hero.jpg" alt="Biloo composting toilet render" /></figure>
+        <div class="masonry masonry--3">
+          <figure class="shot"><img data-src="assets/img/biloo_field.jpg" alt="Biloo placed at a festival at sunset" /></figure>
+          <figure class="shot"><img data-src="assets/img/biloo_config.jpg" alt="Circular configuration of toilet blocks" /></figure>
+          <figure class="shot"><img data-src="assets/img/biloo_cad.jpg" alt="Dual toilet layout, top render" /></figure>
+        </div>
+        <p class="proj__sub2">Prototyping <span class="chip">Full scale wooden prototype</span></p>
+        <div class="masonry masonry--2">
+          <figure class="shot"><img data-src="assets/img/biloo_top.jpg" alt="Wooden prototype in the field" /></figure>
+          <figure class="shot"><img data-src="assets/img/biloo_test.jpg" alt="Wooden prototype tested outdoors" /></figure>
+        </div>
+      </div></div>
+    </article>
 
-<!-- ============ PROJECT 01 — BIYOU ============ -->
-<section class="project" id="p01" data-accent="#1740e8" data-on="#ffffff" data-name="B|YOU">
-  <span class="project__watermark" aria-hidden="true">01</span>
-  <div class="project__sticky">
-    <span class="project__num">01</span>
-    <span class="project__vert">Ergonomics · Branding</span>
-  </div>
-  <div class="project__body">
-    <header class="project__head">
-      <h2 class="project__title reveal-lines">B<span class="bar">|</span>YOU</h2>
-      <p class="project__sub reveal">A jeweler's tool family</p>
-      <ul class="project__meta reveal">
-        <li><span>Year</span>2023</li>
-        <li><span>Role</span>Group &amp; solo</li>
-        <li><span>Field</span>Ergonomics &amp; branding</li>
-      </ul>
-    </header>
-    <p class="project__lead reveal">A cohesive family of four ergonomic hand tools for the hobbyist jeweler, built around a strong, dreamy brand. After studying jewelers and defining a Gen&nbsp;X audience (43–61), the winning concept paired a tiltable, comfortable grip with a precise tensioning system.</p>
-    <ul class="tags reveal"><li>Ergonomics</li><li>Branding</li><li>Tool family</li><li>User research</li><li>SolidWorks</li></ul>
+    <!-- 03 AMI -->
+    <article class="proj" id="p03" data-accent="#fe4834" data-on="#ffffff" style="--accent:#fe4834;--on-accent:#ffffff">
+      <button class="proj__bar" aria-expanded="false" aria-controls="p03d">
+        <span class="proj__num">03</span>
+        <span class="proj__head"><span class="proj__name">AMI</span><span class="proj__teaser">A product service system that reconnects long term hospital patients with their support network.</span></span>
+        <span class="proj__metaline">2024 <i>/</i> Service &amp; UX design</span>
+        <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
+      </button>
+      <div class="proj__detail" id="p03d"><div class="proj__inner">
+        <div class="proj__cols">
+          <p class="proj__lead">Through personal avatars, social hubs and a simple app, appearance becomes secondary and connection thrives. Patients join workshops and events, host their own, ask questions and keep a sense of autonomy through a long recovery.</p>
+          <ul class="tags"><li>Service design</li><li>UX</li><li>Avatars</li><li>Healthcare</li><li>Cocreation</li></ul>
+        </div>
+        <p class="proj__sub2">Scroll through the end of term report <svg class="ast-sm" viewBox="0 0 24 24" style="width:1em;height:1em"><use href="#arrow-right"/></svg></p>
+        <div class="hstrip" id="amiStrip" tabindex="0" aria-label="AMI end of term report, scroll horizontally">
+          <img data-src="assets/img/ami_p01.jpg" alt="AMI report slide 1" />
+          <img data-src="assets/img/ami_p02.jpg" alt="AMI report slide 2" />
+          <img data-src="assets/img/ami_p03.jpg" alt="AMI report slide 3" />
+          <img data-src="assets/img/ami_p04.jpg" alt="AMI report slide 4" />
+          <img data-src="assets/img/ami_p05.jpg" alt="AMI report slide 5" />
+          <img data-src="assets/img/ami_p06.jpg" alt="AMI report slide 6" />
+          <img data-src="assets/img/ami_p07.jpg" alt="AMI report slide 7" />
+          <img data-src="assets/img/ami_p08.jpg" alt="AMI report slide 8" />
+          <img data-src="assets/img/ami_p09.jpg" alt="AMI report slide 9" />
+          <img data-src="assets/img/ami_p10.jpg" alt="AMI report slide 10" />
+          <img data-src="assets/img/ami_p11.jpg" alt="AMI report slide 11" />
+          <img data-src="assets/img/ami_p12.jpg" alt="AMI report slide 12" />
+        </div>
+        <a class="watch" href="https://youtu.be/rYbWHlqxnuc" target="_blank" rel="noopener"><span>Watch the concept film</span><svg viewBox="0 0 24 24"><use href="#arrow-diag"/></svg></a>
+        <p class="proj__credit">Group 18. Yasmine Boulakhrif, Davide Jansen Buonsenso, Iris Ligtenberg, Zeno Römer and Jorre Vrambout.</p>
+      </div></div>
+    </article>
 
-    <div class="gallery gallery--feature reveal">
-      <figure class="shot shot--hero"><img src="assets/img/biyou_hero.jpg" alt="CALCITE — the B|YOU jeweler's saw" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biyou_hand.jpg" alt="The jeweler's saw held in hand" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biyou_blue.jpg" alt="Blue variant of the jeweler's saw" loading="lazy" /></figure>
-    </div>
+    <!-- 04 REPAIR AID -->
+    <article class="proj" id="p04" data-accent="#fdee21" data-on="#0c0c0c" style="--accent:#fdee21;--on-accent:#0c0c0c">
+      <button class="proj__bar" aria-expanded="false" aria-controls="p04d">
+        <span class="proj__num">04</span>
+        <span class="proj__head"><span class="proj__name">Repair Aid</span><span class="proj__teaser">My master's thesis on the future of repair. A digital companion from a vague fault to a clear diagnosis.</span></span>
+        <span class="proj__metaline">2025 / 2026 <i>/</i> Master's thesis</span>
+        <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
+      </button>
+      <div class="proj__detail" id="p04d"><div class="proj__inner">
+        <div class="proj__cols">
+          <p class="proj__lead">Built around small household electronics, starting with the vacuum cleaner, Repair Aid turns the user into a sensor through safe visual, audio and maintenance checks. It then weighs cost, time, complexity, success chance and lifespan gained on one decision screen. Its physical counterpart, Repair Base, offers guided hands on repair when a home fix feels too uncertain.</p>
+          <ul class="tags"><li>Circular economy</li><li>Service design</li><li>AI agents</li><li>Diagnosis</li><li>E6 ecosystem</li></ul>
+        </div>
+        <figure class="shot shot--full"><img data-src="assets/img/repair_ui.jpg" alt="Repair Aid diagnosis complete screen" /></figure>
+        <div class="masonry masonry--2">
+          <figure class="shot"><img data-src="assets/img/repair_phone.jpg" alt="Repair Aid mobile companion, repair don't replace" /></figure>
+          <figure class="shot"><img data-src="assets/img/repair_arch.jpg" alt="The Repair Aid ecosystem" /></figure>
+        </div>
+        <p class="proj__credit">Promotors Jelle Saldien and Philip Van Pelt. Positioned within the European E6 repair ecosystem, exploring how AI agents can connect user, device, repairer and data.</p>
+      </div></div>
+    </article>
 
-    <div class="features reveal">
-      <div class="feature"><span class="feature__k">Optimal</span><p>Grip sits at the pressure point between middle, ring and pinky fingers.</p></div>
-      <div class="feature"><span class="feature__k">Modular</span><p>A sliding frame fits any saw-blade length.</p></div>
-      <div class="feature"><span class="feature__k">Ergonomic</span><p>Handle tilts upward, cutting wrist torsion in long sessions.</p></div>
-      <div class="feature"><span class="feature__k">Functional</span><p>A tightening system locks and tensions the blade with ease.</p></div>
-    </div>
+    <!-- 05 FIRMA FUNK -->
+    <article class="proj" id="p05" data-accent="#eb6627" data-on="#ffffff" style="--accent:#eb6627;--on-accent:#ffffff">
+      <button class="proj__bar" aria-expanded="false" aria-controls="p05d">
+        <span class="proj__num">05</span>
+        <span class="proj__head"><span class="proj__name">Firma Funk</span><span class="proj__teaser">An events collective I cofounded. SILO 1 turned a former hospital site into a temporary world of vinyl and groove.</span></span>
+        <span class="proj__metaline">2025 <i>/</i> Scenography &amp; events</span>
+        <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
+      </button>
+      <div class="proj__detail" id="p05d"><div class="proj__inner">
+        <div class="proj__cols">
+          <p class="proj__lead">Firma Funk brings together product development, graphic design, photography, journalism, economics and social work. SILO 1 took over Bar Ziek in Antwerp and moved the crowd gradually from day into night. Scenography here is more than decoration. It is music, light, space, interaction and the emotional rhythm of a day.</p>
+          <ul class="tags"><li>Scenography</li><li>Event design</li><li>Vinyl and groove</li><li>Inclusivity</li><li>Community</li><li>Cofounding</li></ul>
+        </div>
+        <div class="masonry masonry--2">
+          <figure class="vid"><video data-src="assets/video/ff_vid_1.mp4" poster="assets/img/ff_vid_1.jpg" muted loop playsinline preload="none"></video></figure>
+          <figure class="shot"><img data-src="assets/img/ff_IMG_3712.jpg" alt="The entrance to Bar Ziek during SILO 1" /></figure>
+          <figure class="vid"><video data-src="assets/video/ff_vid_3.mp4" poster="assets/img/ff_vid_3.jpg" muted loop playsinline preload="none"></video></figure>
+          <figure class="shot"><img data-src="assets/img/ff_IMG_7451.jpg" alt="The crowd dancing at dusk" /></figure>
+          <figure class="vid"><video data-src="assets/video/ff_vid_2.mp4" poster="assets/img/ff_vid_2.jpg" muted loop playsinline preload="none"></video></figure>
+          <figure class="shot"><img data-src="assets/img/ff_IMG_7331.jpg" alt="A silent disco moment with headphones" /></figure>
+          <figure class="vid"><video data-src="assets/video/ff_vid_4.mp4" poster="assets/img/ff_vid_4.jpg" muted loop playsinline preload="none"></video></figure>
+          <figure class="shot"><img data-src="assets/img/ff_IMG_7408.jpg" alt="Live performance in the garden" /></figure>
+        </div>
+        <p class="proj__credit">SILO 1 also featured a wearable haptic prototype that let people with hearing impairments feel the music.</p>
+      </div></div>
+    </article>
 
-    <p class="project__subhead reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> The design family — Calcite · Opaal · Kunziet · Onyx</p>
-    <div class="gallery gallery--grid reveal">
-      <figure class="shot shot--wide"><img src="assets/img/biyou_family.jpg" alt="The full family of four jeweler tools" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biyou_c1.jpg" alt="Concept render one" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biyou_c2.jpg" alt="Concept render two" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biyou_c3.jpg" alt="Concept render three" loading="lazy" /></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROJECT 02 — BILOO ============ -->
-<section class="project" id="p02" data-accent="#8c3296" data-on="#ffffff" data-name="Biloo">
-  <span class="project__watermark" aria-hidden="true">02</span>
-  <div class="project__sticky">
-    <span class="project__num">02</span>
-    <span class="project__vert">Bachelor's thesis</span>
-  </div>
-  <div class="project__body">
-    <header class="project__head">
-      <h2 class="project__title reveal-lines">Biloo</h2>
-      <p class="project__sub reveal">The composting toilet</p>
-      <ul class="project__meta reveal">
-        <li><span>Year</span>2024</li>
-        <li><span>Role</span>Solo · WeComeAsFriends</li>
-        <li><span>Field</span>Bachelor's thesis</li>
-      </ul>
-    </header>
-    <p class="project__lead reveal">In collaboration with WeComeAsFriends: a waterless, odorless, chemical-free composting toilet for the events sector. Fully mechanical — no power needed — its dual-toilet layout speeds installation and maintenance and turns waste into compost using carbon fibre.</p>
-    <ul class="tags reveal"><li>Sustainability</li><li>Composting</li><li>Fully mechanical</li><li>Festivals → corporate</li></ul>
-
-    <div class="gallery gallery--feature reveal">
-      <figure class="shot shot--hero"><img src="assets/img/biloo_hero.jpg" alt="The Biloo composting toilet against the sky" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biloo_field.jpg" alt="Biloo prototype outdoors" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biloo_config.jpg" alt="Biloo configuration render" loading="lazy" /></figure>
-    </div>
-
-    <div class="stats reveal">
-      <div class="stat"><b data-count="100">0</b><span>people / toilet / day</span></div>
-      <div class="stat"><b data-count="52">0</b><span>toilets per block</span></div>
-      <div class="stat"><b data-count="0" data-suffix="">0</b><span>litres of water used</span></div>
-    </div>
-
-    <div class="gallery gallery--grid reveal">
-      <figure class="shot shot--wide"><img src="assets/img/biloo_top.jpg" alt="Circular configuration, top view" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biloo_test.jpg" alt="Real-world prototype test" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/biloo_cad.jpg" alt="Biloo CAD configuration" loading="lazy" /></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROJECT 03 — AMI ============ -->
-<section class="project" id="p03" data-accent="#fe4834" data-on="#ffffff" data-name="AMI">
-  <span class="project__watermark" aria-hidden="true">03</span>
-  <div class="project__sticky">
-    <span class="project__num">03</span>
-    <span class="project__vert">Service · UX design</span>
-  </div>
-  <div class="project__body">
-    <header class="project__head">
-      <h2 class="project__title reveal-lines">AMI</h2>
-      <p class="project__sub reveal">A community for long-term patients</p>
-      <ul class="project__meta reveal">
-        <li><span>Year</span>2024</li>
-        <li><span>Role</span>Group of five</li>
-        <li><span>Field</span>Product-Service System</li>
-      </ul>
-    </header>
-    <p class="project__lead reveal">AMI is a product-service system that helps long-term adult hospital patients re-connect with their support network. Through personalised avatars, social hubs and a simple app, appearance becomes secondary and connection thrives — patients join workshops and events, host their own, ask questions and keep a sense of autonomy through a long recovery.</p>
-    <ul class="tags reveal"><li>Service design</li><li>UX</li><li>Avatars</li><li>Healthcare</li><li>NFC</li><li>Co-design</li></ul>
-
-    <p class="project__quote reveal">“How can we re-connect long-term hospital patients with their support network — to foster social connection, autonomy and well-being?”</p>
-
-    <div class="gallery gallery--grid reveal">
-      <figure class="shot shot--wide"><img src="assets/img/ami_join.jpg" alt="AMI — join the community screen with avatar" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ami_customize.jpg" alt="Customise your character" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ami_map.jpg" alt="Map of the hospital hubs" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ami_agenda.jpg" alt="Agenda of workshops and events" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ami_chat.jpg" alt="Chatroom and questions" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ami_character.jpg" alt="AMI avatar character design" loading="lazy" /></figure>
-    </div>
-
-    <div class="video reveal" data-yt="rYbWHlqxnuc">
-      <img class="video__poster" src="assets/img/ami_join.jpg" alt="AMI concept video" loading="lazy" />
-      <button class="video__play" aria-label="Play AMI concept video"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
-      <span class="video__label">Watch the concept film</span>
-    </div>
-
-    <p class="project__credit reveal">Group 18 — Yasmine Boulakhrif, Davide Jansen Buonsenso, Iris Ligtenberg, Zeno Römer &amp; Jorre Vrambout.</p>
-  </div>
-</section>
-
-<!-- ============ PROJECT 04 — REPAIR AID ============ -->
-<section class="project" id="p04" data-accent="#fdee21" data-on="#0c0c0c" data-name="Repair Aid">
-  <span class="project__watermark" aria-hidden="true">04</span>
-  <div class="project__sticky">
-    <span class="project__num">04</span>
-    <span class="project__vert">Master's thesis</span>
-  </div>
-  <div class="project__body">
-    <header class="project__head">
-      <h2 class="project__title reveal-lines">Repair&nbsp;Aid</h2>
-      <p class="project__sub reveal">Repair, don't replace.</p>
-      <ul class="project__meta reveal">
-        <li><span>Year</span>2025—2026</li>
-        <li><span>Role</span>Solo · Master's thesis</li>
-        <li><span>Promotors</span>J. Saldien · P. Van Pelt</li>
-      </ul>
-    </header>
-    <p class="project__lead reveal">My master's thesis on the future of repair. Repair&nbsp;Aid is a digital repair companion and product-service system that guides citizens from a vague “it stopped working” to a clear diagnosis and a realistic repair path — turning a throw-away reflex into a confident, do-able next step.</p>
-    <ul class="tags reveal"><li>Circular economy</li><li>Service design</li><li>AI agents</li><li>Diagnosis</li><li>E6 ecosystem</li><li>Antwerp</li></ul>
-
-    <div class="gallery gallery--feature reveal">
-      <figure class="shot shot--hero shot--dark"><img src="assets/img/repair_hero.jpg" alt="Repair Aid — repair, don't replace" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/repair_phone.jpg" alt="Repair Aid mobile companion" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/repair_dashboard.jpg" alt="Personalising your repair agent" loading="lazy" /></figure>
-    </div>
-
-    <div class="split reveal">
-      <p class="split__body">Built around small household electronics — starting with the vacuum cleaner — Repair&nbsp;Aid turns the user into a sensor through safe visual, audio and maintenance checks, then weighs cost, time, complexity, success-chance and lifespan gained on a single decision screen. Its physical counterpart, <em>Repair Base</em>, offers guided hands-on repair when a home fix is too uncertain.</p>
-      <ul class="split__facts">
-        <li><b>35 Mt</b><span>e-waste in Europe each year</span></li>
-        <li><b>~22%</b><span>correctly collected &amp; recycled</span></li>
-        <li><b>R5</b><span>repair sits high on the R-ladder</span></li>
-      </ul>
-    </div>
-
-    <div class="gallery gallery--grid reveal">
-      <figure class="shot"><img src="assets/img/repair_diagnose.jpg" alt="Interactive diagnosis — what do you notice about the device?" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/repair_decision.jpg" alt="Choose your repair path" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/repair_eco.jpg" alt="Ecological verification of a repair" loading="lazy" /></figure>
-      <figure class="shot shot--wide"><img src="assets/img/repair_base.jpg" alt="Repair Base — a physical guided-repair space" loading="lazy" /></figure>
-    </div>
-    <p class="project__credit reveal">Positioned within the European <b>E6</b> repair ecosystem (Interreg North-West Europe), exploring how AI agents can bridge user, device, repairer and data.</p>
-  </div>
-</section>
-
-<!-- ============ PROJECT 05 — FIRMA FUNK ============ -->
-<section class="project" id="p05" data-accent="#eb6627" data-on="#ffffff" data-name="Firma Funk">
-  <span class="project__watermark" aria-hidden="true">05</span>
-  <div class="project__sticky">
-    <span class="project__num">05</span>
-    <span class="project__vert">Scenography · Events</span>
-  </div>
-  <div class="project__body">
-    <header class="project__head">
-      <h2 class="project__title reveal-lines">Firma&nbsp;Funk</h2>
-      <p class="project__sub reveal">SILO 1 — a party that feels like a narrative</p>
-      <ul class="project__meta reveal">
-        <li><span>Year</span>2025</li>
-        <li><span>Role</span>Co-founder &amp; facilitator</li>
-        <li><span>Field</span>Scenography &amp; event design</li>
-      </ul>
-    </header>
-    <p class="project__lead reveal">Firma&nbsp;Funk is a collective I co-founded with four friends — bringing together product development, graphic design, photography, journalism, economics and social work. Our first event, <em>SILO&nbsp;1</em>, transformed Bar&nbsp;Ziek, a former hospital site in Antwerp, into a temporary world built around vinyl, groove and a gradual journey from day into night.</p>
-    <ul class="tags reveal"><li>Scenography</li><li>Event design</li><li>Vinyl &amp; groove</li><li>Inclusivity</li><li>Community</li><li>Co-founding</li></ul>
-
-    <div class="gallery gallery--feature reveal">
-      <figure class="shot shot--hero"><img src="assets/img/ff_IMG_3712.jpg" alt="The entrance to Bar Ziek during SILO 1" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ff_C0176T01.jpg" alt="Vinyl DJ set at SILO 1" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ff_C0212T01.jpg" alt="String lights over the courtyard at dusk" loading="lazy" /></figure>
-    </div>
-
-    <p class="project__subhead reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Scenography is more than decoration — it's music, light, space, interaction and the emotional rhythm of a day.</p>
-
-    <div class="gallery gallery--grid reveal">
-      <figure class="shot shot--wide"><img src="assets/img/ff_IMG_7451.jpg" alt="The crowd dancing at dusk" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ff_IMG_7331.jpg" alt="A silent-disco moment with headphones" loading="lazy" /></figure>
-      <figure class="shot"><img src="assets/img/ff_IMG_7408.jpg" alt="Live performance in the garden" loading="lazy" /></figure>
-    </div>
-    <p class="project__credit reveal">SILO 1 also hosted a wearable haptic prototype, letting people with hearing impairments feel the music — proof that cultural experiences can be more inclusive without losing their artistic value.</p>
   </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
 <footer class="contact" id="contact">
-  <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Contact — let's connect</p>
-  <h2 class="contact__title reveal-lines">Let's build<br>something <span>good</span>.</h2>
+  <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Contact</p>
+  <h2 class="contact__title reveal-lines">Let's build something <span class="cyc">good</span>.</h2>
   <a class="contact__mail reveal" href="mailto:jorrevrambout@gmail.com">jorrevrambout@gmail.com <svg viewBox="0 0 24 24"><use href="#arrow-diag"/></svg></a>
   <div class="contact__links reveal">
-    <a class="contact__link" href="https://www.linkedin.com/in/jorre-vrambout301289289" target="_blank" rel="noopener"><span>LinkedIn</span><svg viewBox="0 0 24 24"><use href="#arrow-diag"/></svg></a>
+    <a class="contact__link" href="https://www.linkedin.com/in/jorre-vrambout-301289289" target="_blank" rel="noopener"><span>LinkedIn</span><svg viewBox="0 0 24 24"><use href="#arrow-diag"/></svg></a>
     <a class="contact__link" href="tel:+32497698822"><span>+32 497 69 88 22</span></a>
-    <span class="contact__link contact__link--static"><span>Antwerp · Bonheiden, BE</span></span>
+    <span class="contact__link contact__link--static"><span>Antwerp, Belgium</span></span>
   </div>
   <div class="contact__base">
-    <span>© 2026 Jorre Vrambout — Product Development, University of Antwerp</span>
+    <span>© 2026 Jorre Vrambout. Product Development, University of Antwerp.</span>
     <button class="to-top" id="toTop" aria-label="Back to top">Back to top <svg viewBox="0 0 24 24" style="transform:rotate(180deg)"><use href="#arrow-down"/></svg></button>
   </div>
 </footer>
