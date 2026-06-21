@@ -1,0 +1,10 @@
+# Normalize line endings to LF (consistent across machines + Vercel)
+* text=auto eol=lf
+
+# Treat binary assets as binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.ico  binary
