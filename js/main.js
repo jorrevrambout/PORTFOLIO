@@ -54,7 +54,7 @@
   /* photo loop */
   (() => {
     const box = $('#photoLoop'); if (!box) return;
-    const total = 17;
+    const total = 19;
     const srcs = Array.from({ length: total }, (_, i) => `assets/img/jorre_${String(i + 1).padStart(2, '0')}.jpg`);
     const layers = $$('.loop__img', box); const idxEl = $('#loopIndex'); $('#loopTotal').textContent = total;
     let i = 0, front = 0;
