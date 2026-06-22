@@ -16,6 +16,24 @@
     root.setAttribute('data-theme', n); localStorage.setItem('jv-theme', n);
   });
 
+  /* language switcher */
+  const setLang = (lang) => {
+    if (typeof T === 'undefined') return;
+    root.setAttribute('lang', lang);
+    localStorage.setItem('jv-lang', lang);
+    $$('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (T[key] && T[key][lang]) el.innerHTML = T[key][lang];
+    });
+    $$('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  };
+  const savedLang = localStorage.getItem('jv-lang') || 'en';
+  if (savedLang !== 'en') setLang(savedLang);
+  $$('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === savedLang);
+    b.addEventListener('click', () => setLang(b.dataset.lang));
+  });
+
   /* loader */
   const loader = $('#loader'), bar = $('#loaderBar'), pct = $('#loaderPct');
   let p = 0;
@@ -134,11 +152,53 @@
     if (prog) prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
   }, { passive: true });
 
-  /* AMI horizontal strip: vertical wheel -> horizontal */
+  /* AMI horizontal strip: capture wheel anywhere in the proj when strip is visible */
   const strip = $('#amiStrip');
-  strip?.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { strip.scrollLeft += e.deltaY; e.preventDefault(); }
-  }, { passive: false });
+  if (strip) {
+    const amiProj = strip.closest('.proj');
+    (amiProj || strip).addEventListener('wheel', (e) => {
+      if (!amiProj?.classList.contains('open')) return;
+      const atLeft = strip.scrollLeft <= 0;
+      const atRight = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2;
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        if ((e.deltaY < 0 && atLeft) || (e.deltaY > 0 && atRight)) return;
+        strip.scrollLeft += e.deltaY; e.preventDefault();
+      }
+    }, { passive: false });
+  }
+
+  /* motivational letter card deck (swipe + click) */
+  (() => {
+    const deck = $('#letterDeck'); if (!deck) return;
+    const cards = $$('.card', deck), total = cards.length;
+    const idxEl = $('#cardIdx'), totalEl = $('#cardTotal');
+    if (totalEl) totalEl.textContent = total;
+    let cur = 0;
+    const go = (n) => {
+      if (n < 0 || n >= total || n === cur) return;
+      const dir = n > cur ? 1 : -1;
+      cards[cur].classList.remove('active');
+      cards[cur].classList.add(dir > 0 ? 'exit-left' : '');
+      cards[cur].style.transform = `translateX(${dir > 0 ? '-60px' : '60px'})`;
+      const old = cur; cur = n;
+      cards[cur].style.transform = `translateX(${dir > 0 ? '60px' : '-60px'})`;
+      cards[cur].classList.remove('exit-left');
+      requestAnimationFrame(() => { requestAnimationFrame(() => {
+        cards[cur].classList.add('active');
+        cards[cur].style.transform = '';
+      }); });
+      setTimeout(() => { cards[old].classList.remove('exit-left'); cards[old].style.transform = ''; }, 500);
+      if (idxEl) idxEl.textContent = cur + 1;
+    };
+    $('#cardNext')?.addEventListener('click', () => go(cur + 1));
+    $('#cardPrev')?.addEventListener('click', () => go(cur - 1));
+    let sx = 0;
+    deck.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; }, { passive: true });
+    deck.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 50) go(dx < 0 ? cur + 1 : cur - 1);
+    }, { passive: true });
+  })();
 
   /* embedded YouTube facade (plays inside the page, works on static hosting) */
   $$('.ytembed').forEach(yt => {

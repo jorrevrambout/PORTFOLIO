@@ -41,12 +41,17 @@
     <svg class="nav__ast" viewBox="0 0 100 100" aria-hidden="true"><use href="#ast"/></svg><span>Jorre Vrambout</span>
   </a>
   <nav class="nav__links" aria-label="Primary">
-    <a href="#about"><span>About</span></a>
-    <a href="#letter"><span>Letter</span></a>
-    <a href="#work"><span>Work</span></a>
-    <a href="#contact"><span>Contact</span></a>
-    <a href="assets/Jorre_Vrambout_Portfolio_2026.pdf" download><span>PDF</span></a>
+    <a href="#about"><span data-i18n="nav_about">About</span></a>
+    <a href="#letter"><span data-i18n="nav_letter">Letter</span></a>
+    <a href="#work"><span data-i18n="nav_work">Work</span></a>
+    <a href="#contact"><span data-i18n="nav_contact">Contact</span></a>
+    <a href="assets/Jorre_Vrambout_Portfolio_2026.pdf" download><span data-i18n="nav_pdf">PDF</span></a>
   </nav>
+  <div class="nav__lang" id="langToggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="nl">NL</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+  </div>
   <button class="nav__theme" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
     <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="12" cy="12" r="4.4" fill="currentColor"/><g stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="4.6"/><line x1="12" y1="19.4" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="4.6" y2="12"/><line x1="19.4" y1="12" x2="21.5" y2="12"/><line x1="4.9" y1="4.9" x2="6.4" y2="6.4"/><line x1="17.6" y1="17.6" x2="19.1" y2="19.1"/><line x1="4.9" y1="19.1" x2="6.4" y2="17.6"/><line x1="17.6" y1="6.4" x2="19.1" y2="4.9"/></g></svg>
     <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 7 7 0 1 0 20 14.5z" fill="currentColor"/></svg>
@@ -57,27 +62,27 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <p class="hero__eyebrow reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg><span>Portfolio 2026</span><i>/</i><span>Product Development</span></p>
+  <p class="hero__eyebrow reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg><span data-i18n="hero_eyebrow_1">Portfolio 2026</span><i>/</i><span data-i18n="hero_eyebrow_2">Product Development</span></p>
   <h1 class="hero__title">
     <span class="hl reveal"><span>Jorre</span></span>
     <span class="hl reveal"><span>Vrambout</span></span>
   </h1>
-  <p class="hero__role reveal">Product Development student designing for <span class="cyc" style="animation-delay:-1s">repair</span>, <span class="cyc" style="animation-delay:-5s">longevity</span> and <span class="cyc" style="animation-delay:-9s">circular systems</span>.</p>
-  <a href="#about" class="hero__cue reveal" aria-label="Scroll down"><span>Scroll</span><svg viewBox="0 0 24 24"><use href="#arrow-down"/></svg></a>
+  <p class="hero__role reveal" data-i18n="hero_role">Product Development student designing for <span class="cyc" style="animation-delay:-1s">repair</span>, <span class="cyc" style="animation-delay:-5s">longevity</span> and <span class="cyc" style="animation-delay:-9s">circular systems</span>.</p>
+  <a href="#about" class="hero__cue reveal" aria-label="Scroll down"><span data-i18n="hero_scroll">Scroll</span><svg viewBox="0 0 24 24"><use href="#arrow-down"/></svg></a>
 </section>
 
 <!-- ===== ABOUT ME ===== -->
 <section class="about" id="about">
   <div class="about__grid">
     <div class="about__text">
-      <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> About me</p>
-      <h2 class="about__lead reveal-lines">I turn complex challenges into concrete, <span class="cyc">meaningful</span> design.</h2>
-      <p class="reveal">I am a Product Development student with a strong interest in sustainable design, repairability and long lifetime products. I work in an iterative and research driven way, combining analytical thinking with hands on prototyping.</p>
-      <p class="reveal">I like working where technology, user behaviour and circular systems meet, and I am motivated by projects that make a real difference. Curious, collaborative and driven by impact rather than aesthetics alone.</p>
+      <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> <span data-i18n="about_label">About me</span></p>
+      <h2 class="about__lead reveal-lines" data-i18n="about_lead">I turn complex challenges into concrete, <span class="cyc">meaningful</span> design.</h2>
+      <p class="reveal" data-i18n="about_p1">I am a Product Development student with a strong interest in sustainable design, repairability and long lifetime products. I work in an iterative and research driven way, combining analytical thinking with hands on prototyping.</p>
+      <p class="reveal" data-i18n="about_p2">I like working where technology, user behaviour and circular systems meet, and I am motivated by projects that make a real difference. Curious, collaborative and driven by impact rather than aesthetics alone.</p>
       <ul class="about__facts reveal">
-        <li><b>Based in</b>Antwerp, Belgium</li>
-        <li><b>Born</b>7 September 2003</li>
-        <li><b>Study</b>Master, Product Development</li>
+        <li><b data-i18n="about_based">Based in</b><span data-i18n="about_based_v">Antwerp, Belgium</span></li>
+        <li><b data-i18n="about_born">Born</b>7 September 2003</li>
+        <li><b data-i18n="about_study">Study</b><span data-i18n="about_study_v">Master, Product Development</span></li>
       </ul>
     </div>
     <div class="about__loop reveal" id="photoLoop" aria-label="Photos of Jorre">
@@ -93,69 +98,98 @@
   <div class="profile__grid">
 
     <div class="pcol reveal">
-      <h3 class="pcol__title">Hard skills</h3>
+      <h3 class="pcol__title" data-i18n="prof_hard">Hard skills</h3>
       <ul class="rated">
-        <li><span>Service design</span><span class="dots" data-level="5"></span></li>
-        <li><span>Strategic design</span><span class="dots" data-level="5"></span></li>
-        <li><span>Technology driven design</span><span class="dots" data-level="4"></span></li>
-        <li><span>AI and agent development</span><span class="dots" data-level="4"></span></li>
-        <li><span>Adobe software</span><span class="dots" data-level="4"></span></li>
-        <li><span>Procreate</span><span class="dots" data-level="4"></span></li>
-        <li><span>SolidWorks</span><span class="dots" data-level="4"></span></li>
+        <li><span data-i18n="sk_service">Service design</span><span class="dots" data-level="5"></span></li>
+        <li><span data-i18n="sk_strategic">Strategic design</span><span class="dots" data-level="5"></span></li>
+        <li><span data-i18n="sk_tech">Technology driven design</span><span class="dots" data-level="4"></span></li>
+        <li><span data-i18n="sk_ai">AI and agent development</span><span class="dots" data-level="4"></span></li>
+        <li><span data-i18n="sk_adobe">Adobe software</span><span class="dots" data-level="4"></span></li>
+        <li><span data-i18n="sk_procreate">Procreate</span><span class="dots" data-level="4"></span></li>
+        <li><span data-i18n="sk_sw">SolidWorks</span><span class="dots" data-level="4"></span></li>
       </ul>
-      <h3 class="pcol__title pcol__title--mt">Languages</h3>
+      <h3 class="pcol__title pcol__title--mt" data-i18n="prof_lang">Languages</h3>
       <ul class="rated">
-        <li><span>Dutch</span><span class="dots" data-level="5"></span></li>
-        <li><span>English</span><span class="dots" data-level="4"></span></li>
-        <li><span>French</span><span class="dots" data-level="3"></span></li>
+        <li><span data-i18n="lang_nl">Dutch</span><span class="dots" data-level="5"></span></li>
+        <li><span data-i18n="lang_en">English</span><span class="dots" data-level="4"></span></li>
+        <li><span data-i18n="lang_fr">French</span><span class="dots" data-level="3"></span></li>
       </ul>
     </div>
 
     <div class="pcol reveal">
-      <h3 class="pcol__title">Soft skills</h3>
+      <h3 class="pcol__title" data-i18n="prof_soft">Soft skills</h3>
       <ul class="bullets">
-        <li>Curious and investigative</li>
-        <li>Proactive team player</li>
-        <li>Goal oriented and committed</li>
-        <li>Creative and solution oriented</li>
-        <li>Organizational skills</li>
-        <li>Adaptable and resilient</li>
-        <li>Critical and creative thinking</li>
-        <li>Open minded</li>
+        <li data-i18n="ss1">Curious and investigative</li>
+        <li data-i18n="ss2">Proactive team player</li>
+        <li data-i18n="ss3">Goal oriented and committed</li>
+        <li data-i18n="ss4">Creative and solution oriented</li>
+        <li data-i18n="ss5">Organizational skills</li>
+        <li data-i18n="ss6">Adaptable and resilient</li>
+        <li data-i18n="ss7">Critical and creative thinking</li>
+        <li data-i18n="ss8">Open minded</li>
       </ul>
-      <h3 class="pcol__title pcol__title--mt">Hobbies</h3>
-      <ul class="tags"><li>Running</li><li>Scouting</li><li>Bouldering</li><li>Music concerts</li><li>Organising PO events</li></ul>
+      <h3 class="pcol__title pcol__title--mt" data-i18n="prof_hobbies">Hobbies</h3>
+      <ul class="tags"><li data-i18n="hob1">Running</li><li data-i18n="hob2">Scouting</li><li data-i18n="hob3">Bouldering</li><li data-i18n="hob4">Music concerts</li><li data-i18n="hob5">Organising PO events</li></ul>
     </div>
 
     <div class="pcol reveal">
-      <h3 class="pcol__title">Education</h3>
+      <h3 class="pcol__title" data-i18n="prof_edu">Education</h3>
       <ul class="timeline">
-        <li><span class="timeline__yr">2024 / now</span><b>Master, Product Development</b><i>University of Antwerp</i></li>
-        <li><span class="timeline__yr">2021 / 2024</span><b>Bachelor, Product Development</b><i>University of Antwerp</i></li>
-        <li><span class="timeline__yr">2015 / 2021</span><b>Sports sciences</b><i>Berthoutinstituut Klein Seminarie, Mechelen</i></li>
+        <li><span class="timeline__yr">2024 / 2026</span><b data-i18n="edu1">Master, Product Development</b><i data-i18n="edu1s">University of Antwerp</i></li>
+        <li><span class="timeline__yr">2021 / 2024</span><b data-i18n="edu2">Bachelor, Product Development</b><i data-i18n="edu2s">University of Antwerp</i></li>
+        <li><span class="timeline__yr">2015 / 2021</span><b data-i18n="edu3">Sports sciences</b><i data-i18n="edu3s">Berthoutinstituut Klein Seminarie, Mechelen</i></li>
       </ul>
-      <h3 class="pcol__title pcol__title--mt">Experience</h3>
+      <h3 class="pcol__title pcol__title--mt" data-i18n="prof_exp">Experience</h3>
       <ul class="timeline">
-        <li><span class="timeline__yr">2025 / now</span><b>Sustainability Ambassador</b><i>Green Office, University of Antwerp</i></li>
-        <li><span class="timeline__yr">2025</span><b>Product Development Intern</b><i>Pars Pro Toto, Ghent</i></li>
-        <li><span class="timeline__yr">2023 / 2025</span><b>Bartender and server</b><i>Het Brughuis, Muizen</i></li>
-        <li><span class="timeline__yr">2021 / 2025</span><b>Youth leader, volunteer</b><i>Scouting Frassati, Bonheiden</i></li>
+        <li><span class="timeline__yr">2025 / now</span><b data-i18n="exp1">Sustainability Ambassador</b><i data-i18n="exp1s">Green Office, University of Antwerp</i></li>
+        <li><span class="timeline__yr">2025</span><b data-i18n="exp2">Product Development Intern</b><i data-i18n="exp2s">Pars Pro Toto, Ghent</i></li>
+        <li><span class="timeline__yr">2023 / 2025</span><b data-i18n="exp3">Bartender and server</b><i data-i18n="exp3s">Het Brughuis, Muizen</i></li>
+        <li><span class="timeline__yr">2021 / 2025</span><b data-i18n="exp4">Youth leader (volunteer)</b><i data-i18n="exp4s">Scouting Frassati, Bonheiden</i></li>
       </ul>
     </div>
 
   </div>
 </section>
 
-<!-- ===== MOTIVATIONAL LETTER ===== -->
+<!-- ===== MOTIVATIONAL LETTER (swipeable cards) ===== -->
 <section class="letter" id="letter">
   <div class="letter__inner">
-    <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Motivational letter</p>
-    <h2 class="letter__title reveal-lines">Why <span class="cyc">repair</span>.</h2>
-    <div class="letter__body">
-      <p class="reveal">I have always struggled with throwing products away, fascinated from an early age by how objects are built and why they fail. Over time that curiosity grew into the Product Development program and, during my Master, into a clear focus on repairability, longevity and circular design.</p>
-      <p class="reveal">I see myself as an iterative researcher with a social and circular conviction. My thesis started from literature and quickly moved into conversations with people across the Belgian repair landscape. I structured those insights into themes that make the real barriers, drivers and leverage points of repair visible. I believe a product service system only matters when there is genuine demand, support and viability for it.</p>
-      <p class="reveal">My ambition is simple. I want to help make repairing as self evident in the future as recycling is today. That asks for clearer diagnosis, guidance and tools at home, smarter use of additive manufacturing for spare parts, and a rethinking of the whole repair experience.</p>
-      <p class="letter__sign reveal">Jorre Vrambout</p>
+    <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> <span data-i18n="letter_label">Motivational letter</span></p>
+    <h2 class="letter__title reveal-lines" data-i18n="letter_title">Why <span class="cyc">scenography</span>.</h2>
+    <div class="letter__deck" id="letterDeck">
+      <div class="card active" data-card="0">
+        <p class="card__q" data-i18n="card0_q">Summarise your previous trajectory in one sentence.</p>
+        <p class="card__a" data-i18n="card0_a">Born in Brussels, raised in Mechelen, and having completed a Master's degree in Product Development in Antwerp over the past five years, I have gradually positioned myself at the intersection of design, sustainability, technology and human experience.</p>
+      </div>
+      <div class="card" data-card="1">
+        <p class="card__q" data-i18n="card1_q">How do you function in a team?</p>
+        <p class="card__a" data-i18n="card1_a">I am naturally a curious, goal oriented and open minded team player who enjoys taking initiative, bringing forward ideas, connecting with people and creating new collaborations. I am enthusiastic and like to bring energy and momentum to projects, while being comfortable both working independently and contributing within a professional team environment. Where I sometimes encounter challenges is in the shared vision for the final outcome. When the level of ambition, commitment or underlying vision differs significantly within a team, it can create friction later in the process. I have also learned that I am a perfectionist, which sometimes makes it difficult to delegate. However, through the many collaborative projects throughout my Product Development education, I have grown significantly in working within multidisciplinary teams and balancing individual responsibility with collective goals.</p>
+      </div>
+      <div class="card" data-card="2">
+        <p class="card__q" data-i18n="card2_q">What is your vision of scenography today?</p>
+        <p class="card__a" data-i18n="card2_a">I see scenography as something that extends far beyond spatial design alone. It is about creating a complete experience and shaping the emotions people feel when participating in an event. This begins long before the event itself, through the careful development of a clear identity, vision and purpose. The anticipation leading up to the event already becomes part of the narrative. From there, the story continues through the interactivity, originality and atmosphere that the event offers, with the visitor's sense of freedom, energy and engagement placed at the centre. In contemporary events, I often notice a constant search for originality, for that unexpected element that gives an experience its own character. At the same time, it is important not to lose sight of clarity and coherence. The challenge lies in balancing a carefully designed user experience with opportunities for visitors to think differently, explore creatively and temporarily enter a small utopian world. For me, the story does not end when the event is over. A successful experience continues to live on in the thoughts, memories and conversations of its participants long afterwards.</p>
+      </div>
+      <div class="card" data-card="3">
+        <p class="card__q" data-i18n="card3_q">How will you divide your time next year?</p>
+        <p class="card__a" data-i18n="card3_a">Alongside my passion for designing physical experiences and services, my master's thesis has opened the opportunity to continue conducting research. Half of my time will be dedicated to the development of the RepairHub Antwerp project, a collaboration between the University of Antwerp and Stormkop. The project aims to design and test an inclusive repair ecosystem that encourages people to repair products rather than replace them. My role focuses on designing the user experience, services, interactions and physical environment surrounding this repair hub.</p>
+      </div>
+      <div class="card" data-card="4">
+        <p class="card__q" data-i18n="card4_q">Time division continued</p>
+        <p class="card__a" data-i18n="card4_a">In parallel, this project may become the starting point of a PhD trajectory investigating the role of Agentic AI within the circular repair economy. The research explores how intelligent digital agents can support repair services, improve accessibility and contribute to a more sustainable society. Alongside these commitments, I hope to further develop my knowledge of scenography and spatial design through this programme, particularly within the context of festivals, cultural events, concerts and immersive experiences. Equally important is the opportunity to meet like minded people, establish new collaborations, continue experimenting independently and build a pathway into the complex and often difficult to enter event industry.</p>
+      </div>
+      <div class="card" data-card="5">
+        <p class="card__q" data-i18n="card5_q">What would you build if budget were not a factor?</p>
+        <p class="card__a" data-i18n="card5_a">If budget were no limitation, I would not immediately start building. Instead, I would first search for an extraordinary and exclusive location within Belgium. My ideal project would be a multi day underground festival situated in an abandoned industrial site in Charleroi. The atmosphere would be intimate and immersive. Through collaborations with climbing communities and slackliners, temporary climbing structures would be integrated throughout the site. The industrial architecture would be softened and enriched through greenery, natural elements and warm colours. The festival would offer an immersive experience without relying on large technological screens, using projection mapping, lighting, sensory interventions and site specific artworks created from found materials instead.</p>
+      </div>
+      <div class="card" data-card="6">
+        <p class="card__q" data-i18n="card6_q">The dream build continued</p>
+        <p class="card__a" data-i18n="card6_a">Rather than promoting major commercial headliners, the focus would be on emerging local artists who express their genre in its purest form. The musical highlights would be carefully curated through live performances that reinterpret genres in unexpected ways, such as house music performed by a live band, jazz ensembles or techno translated through classical instruments. Visitors would discover secret pop up stages and move through different musical worlds that tell a story spanning from the 1960s and 1970s to the late 1990s. Inclusivity and small scale would remain central throughout. The architecture itself would become an active part of the experience. Water, heights, underground spaces, rooftops and hidden passages would continuously reshape the visitor journey, creating unexpected moments and encouraging exploration at every turn.</p>
+      </div>
+    </div>
+    <div class="card-nav" id="cardNav">
+      <button class="card-nav__btn" id="cardPrev" aria-label="Previous card"><svg viewBox="0 0 24 24" width="20" height="20" style="transform:rotate(90deg)"><use href="#arrow-down"/></svg></button>
+      <span class="card-nav__count"><i id="cardIdx">1</i> / <i id="cardTotal">7</i></span>
+      <button class="card-nav__btn" id="cardNext" aria-label="Next card"><svg viewBox="0 0 24 24" width="20" height="20" style="transform:rotate(-90deg)"><use href="#arrow-down"/></svg></button>
     </div>
   </div>
 </section>
@@ -163,8 +197,8 @@
 <!-- ===== WORK ===== -->
 <section class="work" id="work">
   <header class="work__head">
-    <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Selected work</p>
-    <h2 class="work__title reveal-lines">Five projects. Open one to <span class="cyc">explore</span>.</h2>
+    <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> <span data-i18n="work_label">Selected work</span></p>
+    <h2 class="work__title reveal-lines" data-i18n="work_title">Five projects. Open one to <span class="cyc">explore</span>.</h2>
   </header>
 
   <div class="projects">
@@ -173,28 +207,27 @@
     <article class="proj" id="p01" data-accent="#1740e8" data-on="#ffffff" style="--accent:#1740e8;--on-accent:#ffffff">
       <button class="proj__bar" aria-expanded="false" aria-controls="p01d">
         <span class="proj__num">01</span>
-        <span class="proj__head"><span class="proj__name">B<span class="bar">|</span>YOU</span><span class="proj__teaser">A family of four ergonomic hand tools for the hobbyist jeweler, built around a strong, dreamy brand.</span></span>
+        <span class="proj__head"><span class="proj__name">B<span class="bar">|</span>YOU</span><span class="proj__teaser" data-i18n="p01_teaser">A family of four ergonomic hand tools for the hobbyist jeweler, built around a strong, dreamy brand.</span></span>
         <span class="proj__metaline">2023 <i>/</i> Ergonomics &amp; branding</span>
         <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
       </button>
       <div class="proj__detail" id="p01d"><div class="proj__inner">
         <div class="proj__cols">
-          <p class="proj__lead">B|YOU is a cohesive tool collection inspired by the dreamy world of creation, where freshness, elegance and modernity meet. Flowing lines and clean contours give the family a look that feels energetic and in motion, while a vibrant signature blue and refined details give every tool a fresh, contemporary character.</p>
+          <p class="proj__lead" data-i18n="biyou_lead">B|YOU is a cohesive tool collection inspired by the dreamy world of creation, where freshness, elegance and modernity meet. Flowing lines and clean contours give the family a look that feels energetic and in motion, while a vibrant signature blue and refined details give every tool a fresh, contemporary character.</p>
           <ul class="tags"><li>Ergonomics</li><li>Branding</li><li>Tool family</li><li>User research</li><li>SolidWorks</li></ul>
         </div>
         <figure class="shot shot--full"><img data-src="assets/img/biyou_poster.jpg" alt="The B|YOU jeweler tool family poster" /></figure>
-        <p class="proj__body">Every tool carries an integrated, labeled loop so it can be hung and recognised at a glance, keeping the workspace calm and organised. The family holds four specialised tools. KUNZIET, a hand drill built for smooth operation and precise depth control. OPAAL, a jeweler's file with seamless grip contours for fluid shaping. ONYX, ergonomic pliers that pair strong function with an elegant, high control handle. CALCITE, a jeweler's saw made to turn creative ideas into flawless actions.</p>
-        <p class="proj__sub2"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> CALCITE, the empowering jeweler's saw</p>
-        <p class="proj__body">Designed as a core piece of the family, CALCITE helps craftspeople turn ideas into action. Beyond its modern look it focuses on ergonomics and adaptability for long hours of precision benchwork. The handle tilts upward to reduce the twisting angle of the wrist and lower fatigue. A specialised grip texture sits on the pressure points between the middle, ring and pinky fingers for maximum control. A smart sliding frame makes the saw fully modular so it adapts to blades of different lengths, and an integrated tightening mechanism tensions the blade with ease for controlled, precise cuts.</p>
+        <p class="proj__body" data-i18n="biyou_body">Every tool carries an integrated, labeled loop so it can be hung and recognised at a glance, keeping the workspace calm and organised. The family holds four specialised tools. KUNZIET, a hand drill built for smooth operation and precise depth control. OPAAL, a jeweler's file with seamless grip contours for fluid shaping. ONYX, ergonomic pliers that pair strong function with an elegant, high control handle. CALCITE, a jeweler's saw made to turn creative ideas into flawless actions.</p>
+        <p class="proj__sub2"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> <span data-i18n="biyou_calcite_title">CALCITE, the empowering jeweler's saw</span></p>
+        <p class="proj__body" data-i18n="biyou_calcite_body">Designed as a core piece of the family, CALCITE helps craftspeople turn ideas into action. Beyond its modern look it focuses on ergonomics and adaptability for long hours of precision benchwork. The handle tilts upward to reduce the twisting angle of the wrist and lower fatigue. A specialised grip texture sits on the pressure points between the middle, ring and pinky fingers for maximum control. A smart sliding frame makes the saw fully modular so it adapts to blades of different lengths, and an integrated tightening mechanism tensions the blade with ease for controlled, precise cuts.</p>
         <figure class="shot shot--full"><img data-src="assets/img/biyou_calcite.jpg" alt="CALCITE jeweler's saw, ergonomic breakdown" /></figure>
-        <p class="proj__sub2">More from the project</p>
-        <div class="masonry masonry--3">
-          <figure class="shot"><img data-src="assets/img/biyou_blue.jpg" alt="The jeweler's saw, blue variant" /></figure>
-          <figure class="shot"><img data-src="assets/img/biyou_family.jpg" alt="The tool family on the workbench" /></figure>
-          <figure class="shot"><img data-src="assets/img/biyou_c1.jpg" alt="Concept sketch one" /></figure>
-          <figure class="shot"><img data-src="assets/img/biyou_c2.jpg" alt="Concept sketch two" /></figure>
-          <figure class="shot"><img data-src="assets/img/biyou_c3.jpg" alt="Concept sketch three" /></figure>
+        <p class="proj__sub2" data-i18n="biyou_concepts">Concept drawings</p>
+        <div class="concepts-row">
+          <figure class="shot"><img data-src="assets/img/biyou_c1.jpg" alt="Concept I" /><figcaption>Concept I</figcaption></figure>
+          <figure class="shot"><img data-src="assets/img/biyou_c2.jpg" alt="Concept II" /><figcaption>Concept II</figcaption></figure>
+          <figure class="shot"><img data-src="assets/img/biyou_c3.jpg" alt="Concept III" /><figcaption>Concept III</figcaption></figure>
         </div>
+        <p class="proj__credit" data-i18n="biyou_credits">Eline Praille, Daphne Mulkers, Louis Van der Velden and Jorre Vrambout.</p>
       </div></div>
     </article>
 
@@ -202,13 +235,13 @@
     <article class="proj" id="p02" data-accent="#8c3296" data-on="#ffffff" style="--accent:#8c3296;--on-accent:#ffffff">
       <button class="proj__bar" aria-expanded="false" aria-controls="p02d">
         <span class="proj__num">02</span>
-        <span class="proj__head"><span class="proj__name">Biloo</span><span class="proj__teaser">A waterless, odorless and chemical free composting toilet for the events sector.</span></span>
+        <span class="proj__head"><span class="proj__name">Biloo</span><span class="proj__teaser" data-i18n="p02_teaser">A waterless, odorless and chemical free composting toilet for the events sector.</span></span>
         <span class="proj__metaline">2024 <i>/</i> Bachelor's thesis</span>
         <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
       </button>
       <div class="proj__detail" id="p02d"><div class="proj__inner">
         <div class="proj__cols">
-          <p class="proj__lead">Biloo is an off grid sanitation solution that improves comfort and sustainability at crowded music festivals. It is a waterless duo compost toilet that saves space by sharing one 330 litre sawdust dispenser and a single integrated waste tank across two separate cabins. The system runs entirely without electronics. A manual flush mechanism releases a precise amount of sawdust through a custom rotor profile to keep odor and moisture under control. Built for heavy festival use, it combines a robust AISI 304 stainless steel frame with durable, weather resistant HPL panels, and the final design can be transported, stacked and placed with standard forklifts, so there is no on site assembly and far less maintenance.</p>
+          <p class="proj__lead" data-i18n="biloo_lead">Biloo is an off grid sanitation solution that improves comfort and sustainability at crowded music festivals. It is a waterless duo compost toilet that saves space by sharing one 330 litre sawdust dispenser and a single integrated waste tank across two separate cabins. The system runs entirely without electronics. A manual flush mechanism releases a precise amount of sawdust through a custom rotor profile to keep odor and moisture under control. Built for heavy festival use, it combines a robust AISI 304 stainless steel frame with durable, weather resistant HPL panels, and the final design can be transported, stacked and placed with standard forklifts, so there is no on site assembly and far less maintenance.</p>
           <ul class="tags"><li>Sustainability</li><li>Composting</li><li>Fully mechanical</li><li>Off grid</li><li>Festival ready</li></ul>
         </div>
         <div class="stats">
@@ -216,7 +249,7 @@
           <div class="stat"><b data-count="52">0</b><span>toilets per block</span></div>
           <div class="stat"><b data-count="0">0</b><span>litres of water used</span></div>
         </div>
-        <p class="proj__sub2">Concept renders</p>
+        <p class="proj__sub2" data-i18n="biloo_renders">Concept renders</p>
         <figure class="shot shot--full"><img data-src="assets/img/biloo_hero.jpg" alt="Biloo composting toilet render" /></figure>
         <div class="masonry masonry--3">
           <figure class="shot"><img data-src="assets/img/biloo_field.jpg" alt="Biloo placed at a festival at sunset" /></figure>
@@ -228,6 +261,7 @@
           <figure class="shot"><img data-src="assets/img/biloo_top.jpg" alt="Wooden prototype in the field" /></figure>
           <figure class="shot"><img data-src="assets/img/biloo_test.jpg" alt="Wooden prototype tested outdoors" /></figure>
         </div>
+        <p class="proj__body" data-i18n="biloo_proto">Beyond designing concepts and services, I love developing and testing ideas in the physical world. This full scale Biloo prototype was the perfect canvas for that. Making a design tangible lets you directly verify the human interaction and find out whether a solution really works in practice. I am getting a solid grip on woodworking and I am eager to add welding, lighting and sound to my technical skill set so I can build and design even more immersive physical experiences.</p>
       </div></div>
     </article>
 
@@ -235,16 +269,16 @@
     <article class="proj" id="p03" data-accent="#fe4834" data-on="#ffffff" style="--accent:#fe4834;--on-accent:#ffffff">
       <button class="proj__bar" aria-expanded="false" aria-controls="p03d">
         <span class="proj__num">03</span>
-        <span class="proj__head"><span class="proj__name">AMI</span><span class="proj__teaser">A product service system that reconnects long term hospital patients with their support network.</span></span>
+        <span class="proj__head"><span class="proj__name">AMI</span><span class="proj__teaser" data-i18n="p03_teaser">A product service system that reconnects long term hospital patients with their support network.</span></span>
         <span class="proj__metaline">2024 <i>/</i> Service &amp; UX design</span>
         <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
       </button>
       <div class="proj__detail" id="p03d"><div class="proj__inner">
         <div class="proj__cols">
-          <p class="proj__lead">Through personal avatars, social hubs and a simple app, appearance becomes secondary and connection thrives. Patients join workshops and events, host their own, ask questions and keep a sense of autonomy through a long recovery.</p>
+          <p class="proj__lead" data-i18n="ami_lead">Through personal avatars, social hubs and a simple app, appearance becomes secondary and connection thrives. Patients join workshops and events, host their own, ask questions and keep a sense of autonomy through a long recovery.</p>
           <ul class="tags"><li>Service design</li><li>UX</li><li>Avatars</li><li>Healthcare</li><li>Cocreation</li></ul>
         </div>
-        <p class="proj__sub2">Scroll through the end of term report <svg class="ast-sm" viewBox="0 0 24 24" style="width:1em;height:1em"><use href="#arrow-right"/></svg></p>
+        <p class="proj__sub2"><span data-i18n="ami_strip">Scroll through the end of term report</span> <svg class="ast-sm" viewBox="0 0 24 24" style="width:1em;height:1em"><use href="#arrow-right"/></svg></p>
         <div class="hstrip" id="amiStrip" tabindex="0" aria-label="AMI end of term report, scroll horizontally">
           <img data-src="assets/img/ami_p01.jpg" alt="AMI report slide 1" />
           <img data-src="assets/img/ami_p02.jpg" alt="AMI report slide 2" />
@@ -259,12 +293,12 @@
           <img data-src="assets/img/ami_p11.jpg" alt="AMI report slide 11" />
           <img data-src="assets/img/ami_p12.jpg" alt="AMI report slide 12" />
         </div>
-        <p class="proj__sub2">Concept film</p>
+        <p class="proj__sub2" data-i18n="ami_film">Concept film</p>
         <div class="ytembed" data-yt="rYbWHlqxnuc">
           <img class="ytembed__poster" src="https://i.ytimg.com/vi/rYbWHlqxnuc/hqdefault.jpg" alt="AMI concept film" loading="lazy" />
           <button class="ytembed__play" aria-label="Play the AMI concept film"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
         </div>
-        <p class="proj__credit">Group 18. Yasmine Boulakhrif, Davide Jansen Buonsenso, Iris Ligtenberg, Zeno Römer and Jorre Vrambout.</p>
+        <p class="proj__credit" data-i18n="ami_credits">Yasmine Boulakhrif, Iris Ligtenberg, Davide Jansen Buonsenso, Zeno Römer and Jorre Vrambout.</p>
       </div></div>
     </article>
 
@@ -272,26 +306,26 @@
     <article class="proj" id="p04" data-accent="#fdee21" data-on="#0c0c0c" style="--accent:#fdee21;--on-accent:#0c0c0c">
       <button class="proj__bar" aria-expanded="false" aria-controls="p04d">
         <span class="proj__num">04</span>
-        <span class="proj__head"><span class="proj__name">Repair Aid</span><span class="proj__teaser">My master's thesis investigating agentic AI in product development. A digital tool empowering consumers to diagnose and repair their household electronics.</span></span>
+        <span class="proj__head"><span class="proj__name">Repair Aid</span><span class="proj__teaser" data-i18n="p04_teaser">My master's thesis investigating agentic AI in product development. A digital tool empowering consumers to diagnose and repair their household electronics.</span></span>
         <span class="proj__metaline">2025 / 2026 <i>/</i> Master's thesis</span>
         <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
       </button>
       <div class="proj__detail" id="p04d"><div class="proj__inner">
         <div class="proj__cols">
-          <p class="proj__lead">RepairAid is my master's thesis at the University of Antwerp, within Product Development. It explores how artificial intelligence can support a more accessible and circular repair culture. Today many household devices are thrown away while repair is still technically possible. The problem is often not the fault itself but the uncertainty around it. People do not know what is wrong, how much a repair will cost, how long it will take or which options exist, so replacing becomes the easy choice.</p>
+          <p class="proj__lead" data-i18n="repair_lead">RepairAid is my master's thesis at the University of Antwerp, within Product Development. It explores how artificial intelligence can support a more accessible and circular repair culture. Today many household devices are thrown away while repair is still technically possible. The problem is often not the fault itself but the uncertainty around it. People do not know what is wrong, how much a repair will cost, how long it will take or which options exist, so replacing becomes the easy choice.</p>
           <ul class="tags"><li>Circular economy</li><li>Service design</li><li>Agentic AI</li><li>Diagnosis</li><li>Repair Base</li></ul>
         </div>
         <figure class="shot shot--full shot--white"><img data-src="assets/img/repair_expo_01.jpg" alt="Repair Aid, repair don't replace" /></figure>
-        <p class="proj__body">RepairAid removes that uncertainty. It combines historical repair data, user input and agentic AI in one guidance system. Instead of sending people to scattered manuals or search engines, it guides them step by step in understanding a fault and choosing a repair route.</p>
+        <p class="proj__body" data-i18n="repair_body1">RepairAid removes that uncertainty. It combines historical repair data, user input and agentic AI in one guidance system. Instead of sending people to scattered manuals or search engines, it guides them step by step in understanding a fault and choosing a repair route.</p>
         <div class="masonry masonry--2">
           <figure class="shot shot--white"><img data-src="assets/img/repair_expo_03.jpg" alt="Repair Aid mobile companion, repairer level" /></figure>
           <figure class="shot shot--white"><img data-src="assets/img/repair_expo_04.jpg" alt="Repair Aid impact dashboard" /></figure>
         </div>
-        <p class="proj__sub2"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Three routes to a repair</p>
-        <p class="proj__body">The system distinguishes three routes. Independent repair at home, guided repair in a Repair Base, and professional repair. Based on the user situation, the complexity of the fault and the expected effort, RepairAid suggests the most feasible option, creating a low threshold path that supports both citizens and professional repairers.</p>
+        <p class="proj__sub2"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> <span data-i18n="repair_routes">Three routes to a repair</span></p>
+        <p class="proj__body" data-i18n="repair_body2">The system distinguishes three routes. Independent repair at home, guided repair in a Repair Base, and professional repair. Based on the user situation, the complexity of the fault and the expected effort, RepairAid suggests the most feasible option, creating a low threshold path that supports both citizens and professional repairers.</p>
         <figure class="shot shot--full shot--white"><img data-src="assets/img/repair_diagram.jpg" alt="The Repair Aid ecosystem, from home repair to Repair Base to professional" /></figure>
-        <p class="proj__body">The innovation lies in combining circular design thinking with agentic AI. Where AI is often used for efficiency or automation, RepairAid asks how the same technology can serve social and ecological goals. By making repair easier it helps extend product lifetimes, reduce material use and shift behaviour from throwing away toward circular use.</p>
-        <p class="proj__credit">Internal promotor prof. dr. Jelle Saldien. External promotor Philip Van Pelt, Thomas More and the E6 project, Ecosystems for Extended Lifetime.</p>
+        <p class="proj__body" data-i18n="repair_body3">The innovation lies in combining circular design thinking with agentic AI. Where AI is often used for efficiency or automation, RepairAid asks how the same technology can serve social and ecological goals. By making repair easier it helps extend product lifetimes, reduce material use and shift behaviour from throwing away toward circular use.</p>
+        <p class="proj__credit" data-i18n="repair_credits">Internal promotor prof. dr. Jelle Saldien. External promotor Philip Van Pelt, Thomas More and the E6 project, Ecosystems for Extended Lifetime.</p>
       </div></div>
     </article>
 
@@ -299,17 +333,17 @@
     <article class="proj" id="p05" data-accent="#eb6627" data-on="#ffffff" style="--accent:#eb6627;--on-accent:#ffffff">
       <button class="proj__bar" aria-expanded="false" aria-controls="p05d">
         <span class="proj__num">05</span>
-        <span class="proj__head"><span class="proj__name">Firma Funk</span><span class="proj__teaser">An events collective I cofounded. SILO 1 turned a former hospital site into a temporary world of vinyl and groove.</span></span>
+        <span class="proj__head"><span class="proj__name">Firma Funk</span><span class="proj__teaser" data-i18n="p05_teaser">An events collective I cofounded. SILO 1 turned a former hospital site into a temporary world of vinyl and groove.</span></span>
         <span class="proj__metaline">2026 <i>/</i> Scenography &amp; events</span>
         <span class="proj__toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#plus"/></svg></span>
       </button>
       <div class="proj__detail" id="p05d"><div class="proj__inner">
         <div class="proj__cols">
-          <p class="proj__lead">Firma Funk is a side project I cofounded with four close friends, bringing together product development, graphic design, photography, journalism, economics and social work. What began as a shared love for disco, groove and early electronic music grew into a collective focused on intimate events that put atmosphere, connection and storytelling before spectacle.</p>
+          <p class="proj__lead" data-i18n="ff_lead">Firma Funk is a side project I cofounded with four close friends, bringing together product development, graphic design, photography, journalism, economics and social work. What began as a shared love for disco, groove and early electronic music grew into a collective focused on intimate events that put atmosphere, connection and storytelling before spectacle.</p>
           <ul class="tags"><li>Scenography</li><li>Event design</li><li>Vinyl and groove</li><li>Inclusivity</li><li>Community</li><li>Cofounding</li></ul>
         </div>
-        <p class="proj__body">Our first event, SILO 1, was built around one idea. A party should feel like a narrative rather than a playlist. We moved away from the harder, louder, faster reflex of much of today's nightlife and designed a gradual musical journey around vinyl sets, groove and careful transitions from day into night.</p>
-        <p class="proj__body">To bring this to life we transformed Bar Ziek, a former hospital site in Antwerp, into a temporary world of its own, combining indoor and outdoor spaces that visitors discovered through the day. Together with fellow designers we treated scenography as far more than decoration. It is music, light, space, social interaction and the emotional rhythm of an experience.</p>
+        <p class="proj__body" data-i18n="ff_body1">Our first event, SILO 1, was built around one idea. A party should feel like a narrative rather than a playlist. We moved away from the harder, louder, faster reflex of much of today's nightlife and designed a gradual musical journey around vinyl sets, groove and careful transitions from day into night.</p>
+        <p class="proj__body" data-i18n="ff_body2">To bring this to life we transformed Bar Ziek, a former hospital site in Antwerp, into a temporary world of its own, combining indoor and outdoor spaces that visitors discovered through the day. Together with fellow designers we treated scenography as far more than decoration. It is music, light, space, social interaction and the emotional rhythm of an experience.</p>
         <div class="masonry masonry--2">
           <figure class="vid"><video data-src="assets/video/ff_vid_1.mp4" poster="assets/img/ff_vid_1.jpg" muted loop playsinline preload="none"></video></figure>
           <figure class="shot"><img data-src="assets/img/ff_IMG_3712.jpg" alt="The entrance to Bar Ziek during SILO 1" /></figure>
@@ -320,7 +354,8 @@
           <figure class="vid"><video data-src="assets/video/ff_vid_4.mp4" poster="assets/img/ff_vid_4.jpg" muted loop playsinline preload="none"></video></figure>
           <figure class="shot"><img data-src="assets/img/ff_IMG_3731.jpg" alt="Setting up the lighting and sound rig for SILO 1" /></figure>
         </div>
-        <p class="proj__body">Inclusivity mattered too. SILO 1 hosted a wearable haptic prototype that let people with hearing impairments feel the music. As cofounder my role was mainly that of a facilitator, connecting people, shaping the vision and bringing many creative disciplines into one coherent experience. I believe an event starts long before visitors arrive and continues long after they leave.</p>
+        <p class="proj__body" data-i18n="ff_inclusivity">Inclusivity mattered too. SILO 1 hosted a wearable haptic prototype that let people with hearing impairments feel the music. As cofounder my role was mainly that of a facilitator, connecting people, shaping the vision and bringing many creative disciplines into one coherent experience. I believe an event starts long before visitors arrive and continues long after they leave.</p>
+        <p class="proj__credit" data-i18n="ff_credits">Nelle Van Der Herten, Joren Deckers, Tiernan O'Rourke, Kobe Vermeylen and Jorre Vrambout.</p>
       </div></div>
     </article>
 
@@ -329,18 +364,18 @@
 
 <!-- ===== CONTACT ===== -->
 <footer class="contact" id="contact">
-  <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> Contact</p>
-  <h2 class="contact__title reveal-lines">Let's <span class="word-swap" id="wordSwap">Design</span> incredible work together.</h2>
+  <p class="label reveal"><svg class="ast-sm" viewBox="0 0 100 100"><use href="#ast"/></svg> <span data-i18n="contact_label">Contact</span></p>
+  <h2 class="contact__title reveal-lines" data-i18n="contact_title">Let's <span class="word-swap" id="wordSwap">Design</span> incredible work together.</h2>
   <a class="contact__mail reveal" href="mailto:jorrevrambout@gmail.com">jorrevrambout@gmail.com <svg viewBox="0 0 24 24"><use href="#arrow-diag"/></svg></a>
   <div class="contact__links reveal">
-    <a class="contact__link" href="assets/Jorre_Vrambout_Portfolio_2026.pdf" download><span>Download portfolio PDF</span><svg viewBox="0 0 24 24"><use href="#arrow-down"/></svg></a>
+    <a class="contact__link" href="assets/Jorre_Vrambout_Portfolio_2026.pdf" download><span data-i18n="contact_pdf">Download portfolio PDF</span><svg viewBox="0 0 24 24"><use href="#arrow-down"/></svg></a>
     <a class="contact__link" href="https://www.linkedin.com/in/jorre-vrambout-301289289" target="_blank" rel="noopener"><span>LinkedIn</span><svg viewBox="0 0 24 24"><use href="#arrow-diag"/></svg></a>
     <a class="contact__link" href="tel:+32497698822"><span>+32 497 69 88 22</span></a>
-    <span class="contact__link contact__link--static"><span>Antwerp, Belgium</span></span>
+    <span class="contact__link contact__link--static"><span data-i18n="about_based_v">Antwerp, Belgium</span></span>
   </div>
   <div class="contact__base">
-    <span>© 2026 Jorre Vrambout. Product Development, University of Antwerp.</span>
-    <button class="to-top" id="toTop" aria-label="Back to top">Back to top <svg viewBox="0 0 24 24" style="transform:rotate(180deg)"><use href="#arrow-down"/></svg></button>
+    <span data-i18n="contact_copy">© 2026 Jorre Vrambout. Product Development, University of Antwerp.</span>
+    <button class="to-top" id="toTop" aria-label="Back to top"><span data-i18n="contact_top">Back to top</span> <svg viewBox="0 0 24 24" style="transform:rotate(180deg)"><use href="#arrow-down"/></svg></button>
   </div>
 </footer>
 
@@ -355,6 +390,7 @@
   <span class="lightbox__count" id="lbCount"></span>
 </div>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
