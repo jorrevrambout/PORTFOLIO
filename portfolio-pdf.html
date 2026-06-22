@@ -44,8 +44,8 @@ em{font-style:normal;font-weight:600}
 .col{display:flex;flex-direction:column}
 .center{flex:1;display:flex;flex-direction:column;justify-content:center}
 .spread{flex:1;display:flex;flex-direction:column;justify-content:space-between}
-figure{overflow:hidden;background:var(--paper)}
-figure img{width:100%;height:100%;object-fit:cover}
+figure{overflow:hidden;background:#fff}
+figure img{width:100%;height:100%;object-fit:contain}
 .cap{font-family:var(--mono);font-size:7.5pt;color:var(--faint);margin-top:6px;text-transform:uppercase;letter-spacing:.04em}
 
 /* cover */
@@ -81,7 +81,7 @@ figure img{width:100%;height:100%;object-fit:cover}
 
 /* project chrome */
 .ptitle{position:relative}
-.ptitle .pnum{font-family:var(--display);font-weight:900;font-size:230pt;line-height:.7;letter-spacing:-.04em;color:var(--accent);opacity:.12;position:absolute;right:.4in;top:.1in}
+.ptitle .pnum{display:none}
 .ptag{display:inline-block;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:600;font-size:12pt;padding:5px 12px;margin-top:14px}
 .stat-row{display:flex;gap:.7in;margin-top:.1in}
 .stat b{font-family:var(--display);font-weight:900;font-size:46pt;letter-spacing:-.03em;line-height:.9;display:block;color:var(--accent)}
@@ -143,7 +143,7 @@ figure img{width:100%;height:100%;object-fit:cover}
         <p class="body" style="margin-top:.14in;max-width:40ch">I like working where technology, user behaviour and circular systems meet, and I am motivated by projects that make a real difference. Curious, collaborative and driven by impact rather than aesthetics alone.</p>
       </div>
       <div class="col" style="flex:.8">
-        <figure style="flex:1"><img src="assets/img/jorre_13.jpg" alt="Portrait of Jorre Vrambout" /></figure>
+        <figure style="flex:1"><img src="assets/img/jorre_14.jpg" alt="Portrait of Jorre Vrambout" /></figure>
         <div style="display:flex;gap:.4in;margin-top:14px">
           <div><div class="kicker">Based in</div><b style="font-family:var(--display)">Antwerp, BE</b></div>
           <div><div class="kicker">Born</div><b style="font-family:var(--display)">07.09.2003</b></div>
@@ -177,7 +177,7 @@ figure img{width:100%;height:100%;object-fit:cover}
           <li><span>French</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
         </ul>
       </div>
-      <figure class="col" style="flex:.75"><img src="assets/img/jorre_06.jpg" alt="Jorre prototyping" /></figure>
+      <figure class="col" style="flex:.75"><img src="assets/img/jorre_02.jpg" alt="Jorre at work in the studio" /></figure>
     </div>
     <div class="ftr"><span>jorrevrambout@gmail.com</span><span>Skills</span><span>04</span></div>
   </div>
@@ -430,7 +430,7 @@ figure img{width:100%;height:100%;object-fit:cover}
     <div class="col" style="margin-top:.28in;flex:1">
       <h3 class="h3" style="margin-bottom:.1in">Three routes to a repair</h3>
       <p class="body" style="max-width:70ch">Repair Aid distinguishes independent repair at home, guided repair in a Repair Base and professional repair, then suggests the most feasible option based on the situation, the complexity of the fault and the expected effort.</p>
-      <figure style="flex:1;margin-top:.2in;background:#fff"><img src="assets/img/repair_diagram.jpg" alt="The Repair Aid ecosystem" style="object-fit:contain" /></figure>
+      <figure style="height:3.95in;margin-top:.18in"><img src="assets/img/repair_diagram.jpg" alt="The Repair Aid ecosystem, from home repair to Repair Base to professional" /></figure>
     </div>
     <div class="ftr"><span>jorrevrambout@gmail.com</span><span>04 — Repair Aid</span><span>18</span></div>
   </div>
