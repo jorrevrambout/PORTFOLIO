@@ -173,22 +173,18 @@
     const cards = $$('.card', deck), total = cards.length;
     const idxEl = $('#cardIdx'), totalEl = $('#cardTotal');
     if (totalEl) totalEl.textContent = total;
-    let cur = 0;
+    let cur = 0, busy = false;
     const go = (n) => {
-      if (n < 0 || n >= total || n === cur) return;
+      if (n < 0 || n >= total || n === cur || busy) return;
+      busy = true;
       const dir = n > cur ? 1 : -1;
-      cards[cur].classList.remove('active');
-      cards[cur].classList.add(dir > 0 ? 'exit-left' : '');
-      cards[cur].style.transform = `translateX(${dir > 0 ? '-60px' : '60px'})`;
-      const old = cur; cur = n;
-      cards[cur].style.transform = `translateX(${dir > 0 ? '60px' : '-60px'})`;
-      cards[cur].classList.remove('exit-left');
-      requestAnimationFrame(() => { requestAnimationFrame(() => {
-        cards[cur].classList.add('active');
-        cards[cur].style.transform = '';
-      }); });
-      setTimeout(() => { cards[old].classList.remove('exit-left'); cards[old].style.transform = ''; }, 500);
+      cards[cur].classList.remove('active', 'from-left');
+      cards[n].classList.remove('from-left');
+      if (dir < 0) cards[n].classList.add('from-left');
+      cards[n].classList.add('active');
+      cur = n;
       if (idxEl) idxEl.textContent = cur + 1;
+      setTimeout(() => { busy = false; }, 460);
     };
     $('#cardNext')?.addEventListener('click', () => go(cur + 1));
     $('#cardPrev')?.addEventListener('click', () => go(cur - 1));
