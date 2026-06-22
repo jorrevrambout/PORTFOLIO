@@ -26,6 +26,7 @@
       if (T[key] && T[key][lang]) el.innerHTML = T[key][lang];
     });
     $$('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    document.dispatchEvent(new CustomEvent('jv-lang-changed'));
   };
   const savedLang = localStorage.getItem('jv-lang') || 'en';
   if (savedLang !== 'en') setLang(savedLang);
@@ -152,20 +153,16 @@
     if (prog) prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
   }, { passive: true });
 
-  /* AMI horizontal strip: capture wheel anywhere in the proj when strip is visible */
+  /* AMI horizontal strip: hovering the report turns vertical wheel into horizontal scroll */
   const strip = $('#amiStrip');
-  if (strip) {
-    const amiProj = strip.closest('.proj');
-    (amiProj || strip).addEventListener('wheel', (e) => {
-      if (!amiProj?.classList.contains('open')) return;
-      const atLeft = strip.scrollLeft <= 0;
-      const atRight = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2;
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        if ((e.deltaY < 0 && atLeft) || (e.deltaY > 0 && atRight)) return;
-        strip.scrollLeft += e.deltaY; e.preventDefault();
-      }
-    }, { passive: false });
-  }
+  strip?.addEventListener('wheel', (e) => {
+    const atLeft = strip.scrollLeft <= 0;
+    const atRight = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2;
+    if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
+      if ((e.deltaY < 0 && atLeft) || (e.deltaY > 0 && atRight)) return; // let the page scroll at the ends
+      strip.scrollLeft += e.deltaY; e.preventDefault();
+    }
+  }, { passive: false });
 
   /* motivational letter card deck (swipe + click) */
   (() => {
@@ -174,6 +171,17 @@
     const idxEl = $('#cardIdx'), totalEl = $('#cardTotal');
     if (totalEl) totalEl.textContent = total;
     let cur = 0, busy = false;
+    // size the deck to the tallest card so the nav arrows never move.
+    // cards are always rendered (position:absolute, just hidden), so offsetHeight is reliable.
+    const sizeDeck = () => {
+      let max = 0;
+      cards.forEach(c => { max = Math.max(max, c.offsetHeight); });
+      deck.style.height = max + 'px';
+    };
+    sizeDeck();
+    addEventListener('resize', sizeDeck);
+    document.addEventListener('jv-lang-changed', () => setTimeout(sizeDeck, 40));
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeDeck);
     const go = (n) => {
       if (n < 0 || n >= total || n === cur || busy) return;
       busy = true;

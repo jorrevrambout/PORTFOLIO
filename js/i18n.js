@@ -81,6 +81,8 @@ const T = {
   exp3s:{ en:'Het Brughuis, Muizen',           nl:'Het Brughuis, Muizen',          fr:'Het Brughuis, Muizen' },
   exp4: { en:'Youth leader (volunteer)',       nl:'Leiding (vrijwilliger)',        fr:'Animateur (bénévole)' },
   exp4s:{ en:'Scouting Frassati, Bonheiden',   nl:'Scouting Frassati, Bonheiden',  fr:'Scouting Frassati, Bonheiden' },
+  exp5: { en:'Timber Construction Assistant',  nl:'Bouwassistent houtconstructies', fr:'Assistant construction bois' },
+  exp5s:{ en:'Joenes, Leuven',                 nl:'Joenes, Leuven',                fr:'Joenes, Louvain' },
 
   // ===== MOTIVATIONAL LETTER =====
   letter_label: { en:'Motivational letter',    nl:'Motivatiebrief',               fr:'Lettre de motivation' },
