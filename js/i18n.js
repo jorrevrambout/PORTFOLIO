@@ -174,7 +174,7 @@ const T = {
   ami_lead: { en:'Through personal avatars, social hubs and a simple app, appearance becomes secondary and connection thrives. Patients join workshops and events, host their own, ask questions and keep a sense of autonomy through a long recovery.',
               nl:'Via persoonlijke avatars, sociale hubs en een eenvoudige app wordt uiterlijk bijzaak en bloeit verbinding op. Patiënten nemen deel aan workshops en evenementen, organiseren er zelf, stellen vragen en behouden een gevoel van autonomie doorheen een lang herstelproces.',
               fr:'Grâce à des avatars personnalisés, des hubs sociaux et une application simple, l\'apparence devient secondaire et la connexion s\'épanouit. Les patients participent à des ateliers, en organisent eux-mêmes et gardent un sentiment d\'autonomie.' },
-  ami_strip: { en:'Scroll through the end of term report', nl:'Scroll door het eindrapport', fr:'Parcourez le rapport de fin de semestre' },
+  ami_strip: { en:'Scroll through the end report', nl:'Scroll door het eindrapport', fr:'Parcourez le rapport de fin de semestre' },
   ami_film:  { en:'Concept film', nl:'Conceptfilm', fr:'Film conceptuel' },
   ami_credits: { en:'Yasmine Boulakhrif, Iris Ligtenberg, Davide Jansen Buonsenso, Zeno Römer and Jorre Vrambout.',
                  nl:'Yasmine Boulakhrif, Iris Ligtenberg, Davide Jansen Buonsenso, Zeno Römer en Jorre Vrambout.',
