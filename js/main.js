@@ -140,6 +140,17 @@
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { strip.scrollLeft += e.deltaY; e.preventDefault(); }
   }, { passive: false });
 
+  /* embedded YouTube facade (plays inside the page, works on static hosting) */
+  $$('.ytembed').forEach(yt => {
+    yt.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${yt.dataset.yt}?autoplay=1&rel=0`;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true; f.title = 'AMI concept film';
+      yt.innerHTML = ''; yt.appendChild(f);
+    }, { once: true });
+  });
+
   /* custom cursor */
   const cursor = $('#cursor');
   if (cursor && matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce) {
@@ -180,6 +191,7 @@
   $('#lbClose')?.addEventListener('click', close);
   $('#lbNext')?.addEventListener('click', () => show(idx + 1));
   $('#lbPrev')?.addEventListener('click', () => show(idx - 1));
+  lbImg?.addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
   lb?.addEventListener('click', (e) => { if (e.target === lb) close(); });
   addEventListener('keydown', (e) => {
     if (!lb.classList.contains('open')) return;
@@ -187,4 +199,20 @@
   });
 
   $('#toTop')?.addEventListener('click', () => scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }));
+
+  /* contact word cycle: Design / build / create in accent colours */
+  const ws = $('#wordSwap');
+  if (ws && !reduce) {
+    const words = ['Design', 'build', 'create'];
+    const cols = ['--c1', '--c2', '--c3', '--c5'];
+    let k = 0;
+    setInterval(() => {
+      k++; ws.style.opacity = '0';
+      setTimeout(() => {
+        ws.textContent = words[k % words.length];
+        ws.style.color = `var(${cols[k % cols.length]})`;
+        ws.style.opacity = '1';
+      }, 220);
+    }, 2200);
+  }
 })();
